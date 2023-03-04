@@ -1,7 +1,4 @@
-function generate_business_text() {
-
-  //const MY_KEY = process.env.API_KEY;
-  //console.log(MY_KEY);
+function generate_business_text(secret) {
     
   const ai_prompt = "Write a random sentence in the first person that describe the typical reasons why a business owner might be looking for web design services";
 
@@ -9,7 +6,7 @@ function generate_business_text() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": "Bearer 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"
+      "Authorization": "Bearer" + toString(secret)
     },
     body: JSON.stringify({
       model: "text-davinci-003",
@@ -29,10 +26,7 @@ function generate_business_text() {
   .catch(error => console.error(error));
 }
 
-function generate_nonprofit_text() {
-
-  //const MY_KEY = process.env.API_KEY;
-  //console.log(MY_KEY);
+function generate_nonprofit_text(secret) {
     
   const ai_prompt = "Write a random sentence in the first person that describe the typical reasons why a non-profit organization might be looking for web design services";
   
@@ -40,7 +34,7 @@ function generate_nonprofit_text() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": "Bearer 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"
+      "Authorization": "Bearer" + toString(secret)
     },
     body: JSON.stringify({
       model: "text-davinci-003",

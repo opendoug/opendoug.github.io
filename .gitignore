@@ -1,2 +1,6 @@
 # Environments
 .env
+
+# Dev files
+dev_index.html
+dev_ai_generator.js

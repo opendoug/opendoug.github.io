@@ -21,7 +21,7 @@ const Home = () => {
                 alt="WaltersWorks" 
                 className="w-32 h-32 mx-auto mb-8 animate-in fade-in duration-1000"
               />
-              <h1 className="text-5xl md:text-7xl text-foreground mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 tracking-tight">
+              <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-7xl text-foreground mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 tracking-tight">
                 <span className="font-muli font-black">WALTERS</span><span className="font-muli font-extralight italic">WORKS</span>
               </h1>
               <p className="text-xl md:text-2xl text-foreground mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-150">
@@ -175,14 +175,15 @@ const Home = () => {
                 Let's discuss how <span className="tracking-tight text-foreground"><span className="font-muli font-black">WALTERS</span><span className="font-muli font-extralight italic">WORKS</span></span> can help you achieve clarity, build systems, and make strategic decisions that drive growth
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/execworks#contact">
-                  <Button 
-                    size="lg"
-                    className="bg-primary text-white hover:bg-primary/90 font-outfit font-semibold text-lg"
-                  >
+                <Button 
+                  size="lg"
+                  className="bg-primary text-white hover:bg-primary/90 font-outfit font-semibold text-lg"
+                  asChild
+                >
+                  <a href="mailto:doug@waltersworks.com?subject=Website%20Meeting%20Request">
                     Contact Us
-                  </Button>
-                </Link>
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -192,9 +193,9 @@ const Home = () => {
       <footer className="bg-muted/50 py-8 border-t border-border">
         <div className="container">
           <div className="flex flex-col items-center gap-4">
-            <div className="flex items-center gap-3">
-              <img src={waltersworksLogo} alt="WaltersWorks" className="w-8 h-8" />
-              <span className="text-lg tracking-tight text-foreground">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <img src={waltersworksLogo} alt="WaltersWorks" className="w-6 h-6 sm:w-8 sm:h-8" />
+              <span className="text-sm sm:text-lg tracking-tight text-foreground">
                 <span className="font-muli font-black">WALTERS</span><span className="font-muli font-extralight italic">WORKS</span>
               </span>
             </div>

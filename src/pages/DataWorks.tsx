@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ArrowRight, CheckCircle, Database, GitMerge, Zap, BarChart3, RefreshCw, Lock } from "lucide-react";
 import { Contact } from "@/components/Contact";
+import { LogoMarquee } from "@/components/LogoMarquee";
 import heroImage from "@/assets/hero-consultation.jpg";
 import waltersworksLogo from "@/assets/waltersworks-logo.png";
 
@@ -160,6 +161,8 @@ const DataWorks = () => {
             </div>
           </div>
         </section>
+
+        <LogoMarquee />
 
         <Contact />
       </main>

@@ -15,8 +15,8 @@ export const Navigation = () => {
       <div className="container">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-3">
-            <img src={waltersworksLogo} alt="WaltersWorks" className="w-8 h-8" />
-            <div className="text-2xl text-foreground tracking-tight">
+            <img src={waltersworksLogo} alt="WaltersWorks" className="w-8 h-8 flex-shrink-0" />
+            <div className="hidden sm:block text-xl md:text-2xl text-foreground tracking-tight">
               <span className="font-muli font-black">WALTERS</span><span className="font-muli font-extralight italic">WORKS</span>
             </div>
           </Link>

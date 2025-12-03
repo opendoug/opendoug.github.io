@@ -50,8 +50,11 @@ export const Contact = () => {
                 <Button 
                   size="lg"
                   className="bg-primary text-primary-foreground hover:bg-primary/90 font-outfit font-semibold w-full md:w-auto"
+                  asChild
                 >
-                  Schedule Meeting
+                  <a href="mailto:doug@waltersworks.com?subject=Website%20Meeting%20Request">
+                    Schedule Meeting
+                  </a>
                 </Button>
               </div>
             </div>

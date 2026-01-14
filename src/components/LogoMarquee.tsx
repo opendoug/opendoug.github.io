@@ -2,25 +2,23 @@ import { useEffect, useRef } from "react";
 
 interface Logo {
   name: string;
-  src: string;
+  domain: string;
+  src?: string;
 }
 
 const logos: Logo[] = [
-  { name: "QuickBase", src: "https://logo.clearbit.com/quickbase.com" },
-  { name: "QuickBooks", src: "https://logo.clearbit.com/quickbooks.intuit.com" },
-  { name: "AppFolio", src: "https://logo.clearbit.com/appfolio.com" },
-  { name: "Trello", src: "https://logo.clearbit.com/trello.com" },
-  { name: "TSheets", src: "https://logo.clearbit.com/tsheets.com" },
-  { name: "Google Workspace", src: "https://logo.clearbit.com/workspace.google.com" },
-  { name: "RingCentral", src: "https://logo.clearbit.com/ringcentral.com" },
-  { name: "Google Cloud", src: "https://logo.clearbit.com/cloud.google.com" },
-  { name: "Amazon Redshift", src: "https://logo.clearbit.com/aws.amazon.com" },
-  { name: "Fivetran", src: "https://logo.clearbit.com/fivetran.com" },
-  { name: "Stitch", src: "https://logo.clearbit.com/stitchdata.com" },
-  { name: "Airbyte", src: "https://logo.clearbit.com/airbyte.com" },
-  { name: "dbt", src: "https://logo.clearbit.com/getdbt.com" },
-  { name: "Sisense", src: "https://logo.clearbit.com/sisense.com" },
-  { name: "Metabase", src: "https://logo.clearbit.com/metabase.com" },
+  { name: "QuickBase", domain: "quickbase.com", src: "https://www.quickbase.com/images/quickbase-logo.svg" },
+  { name: "QuickBooks", domain: "quickbooks.intuit.com", src: "https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/Blog/Graphic/qb-logo-horizontal-preferred.svg" },
+  { name: "AppFolio", domain: "appfolio.com", src: "https://www.appfolioinc.com/hubfs/AppFolio-Logo.svg" },
+  { name: "Trello", domain: "trello.com", src: "https://cdn.worldvectorlogo.com/logos/trello.svg" },
+  { name: "Google Workspace", domain: "workspace.google.com", src: "https://cdn.worldvectorlogo.com/logos/google-workspace-icon.svg" },
+  { name: "RingCentral", domain: "ringcentral.com", src: "https://cdn.worldvectorlogo.com/logos/ringcentral-1.svg" },
+  { name: "Google Cloud", domain: "cloud.google.com", src: "https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg" },
+  { name: "AWS", domain: "aws.amazon.com", src: "https://cdn.worldvectorlogo.com/logos/aws-2.svg" },
+  { name: "Fivetran", domain: "fivetran.com", src: "https://cdn.worldvectorlogo.com/logos/fivetran-1.svg" },
+  { name: "Airbyte", domain: "airbyte.com", src: "https://cdn.worldvectorlogo.com/logos/airbyte-1.svg" },
+  { name: "dbt", domain: "getdbt.com", src: "https://cdn.worldvectorlogo.com/logos/dbt.svg" },
+  { name: "Metabase", domain: "metabase.com", src: "https://cdn.worldvectorlogo.com/logos/metabase.svg" },
 ];
 
 export const LogoMarquee = () => {
@@ -31,12 +29,12 @@ export const LogoMarquee = () => {
           Systems We've <span className="text-primary">Worked With</span>
         </h3>
       </div>
-      
+
       <div className="relative">
         {/* Gradient overlays for fade effect */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
-        
+
         {/* Marquee container */}
         <div className="flex overflow-hidden">
           <div className="flex animate-marquee gap-12 py-4">
@@ -46,10 +44,17 @@ export const LogoMarquee = () => {
                 className="flex-shrink-0 w-24 h-16 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
               >
                 <img
-                  src={logo.src}
-                  alt={logo.name}
+                  src={logo.src ?? `https://www.google.com/s2/favicons?domain=${logo.domain}&sz=128`}
+                  alt={`${logo.name} logo`}
                   className="max-w-full max-h-full object-contain"
                   title={logo.name}
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const img = e.currentTarget;
+                    const fallback = `https://www.google.com/s2/favicons?domain=${logo.domain}&sz=128`;
+                    if (img.src !== fallback) img.src = fallback;
+                  }}
                 />
               </div>
             ))}
@@ -62,10 +67,17 @@ export const LogoMarquee = () => {
                 className="flex-shrink-0 w-24 h-16 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
               >
                 <img
-                  src={logo.src}
-                  alt={logo.name}
+                  src={logo.src ?? `https://www.google.com/s2/favicons?domain=${logo.domain}&sz=128`}
+                  alt={`${logo.name} logo`}
                   className="max-w-full max-h-full object-contain"
                   title={logo.name}
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const img = e.currentTarget;
+                    const fallback = `https://www.google.com/s2/favicons?domain=${logo.domain}&sz=128`;
+                    if (img.src !== fallback) img.src = fallback;
+                  }}
                 />
               </div>
             ))}

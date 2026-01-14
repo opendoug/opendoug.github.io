@@ -2,110 +2,152 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Comic Book Modern Office Theme - "Successful, Modern Dilbert"
+   Primary color: #1489cd (HSL: 201 82% 44%)
+   Clean line art, professional but with comic book personality
+   All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 222 47% 11%;
+    --background: 210 25% 97%;
+    --foreground: 210 40% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 210 40% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 210 40% 15%;
 
-    --primary: 202 82% 44%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: #1489cd */
+    --primary: 201 82% 44%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    /* Secondary: warm orange complement */
+    --secondary: 25 90% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 30% 94%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 20% 92%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 43 96% 56%;
-    --accent-foreground: 222 47% 11%;
+    /* Accent: success green for team wins */
+    --accent: 145 65% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Highlight: bright yellow for comic-style emphasis */
+    --highlight: 48 95% 60%;
+    --highlight-foreground: 210 40% 15%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 20%;
+    --border: 210 25% 85%;
+    --input: 210 25% 85%;
+    --ring: 201 82% 44%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(202 82% 35%) 0%, hsl(202 82% 50%) 50%, hsl(202 82% 44%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 30% 98%) 100%);
-    --shadow-elegant: 0 10px 40px -10px hsl(202 82% 44% / 0.25);
-    --shadow-card: 0 4px 20px -4px hsl(202 82% 44% / 0.1);
-    --hero-glow: 0 0 60px hsl(202 82% 44% / 0.3);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Comic-style design tokens */
+    --comic-border: 3px solid hsl(210 40% 15%);
+    --comic-border-thick: 4px solid hsl(210 40% 15%);
+    --comic-shadow: 6px 6px 0 hsl(210 40% 15%);
+    --comic-shadow-sm: 4px 4px 0 hsl(210 40% 15%);
+    --comic-shadow-colored: 6px 6px 0 hsl(201 82% 35%);
+    
+    /* Panel effects */
+    --panel-bg: hsl(0 0% 100%);
+    --panel-border: hsl(210 40% 15%);
+    
+    /* Halftone dot pattern for subtle comic texture */
+    --halftone-pattern: radial-gradient(circle, hsl(210 40% 15% / 0.08) 1px, transparent 1px);
+    
+    /* Speech bubble styles */
+    --bubble-bg: hsl(0 0% 100%);
+    --bubble-border: hsl(210 40% 15%);
+    
+    /* Gradient for hero sections - clean, modern */
+    --gradient-hero: linear-gradient(135deg, hsl(201 82% 50%) 0%, hsl(201 82% 38%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(25 90% 55%) 0%, hsl(15 85% 50%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(145 65% 45%) 0%, hsl(145 60% 35%) 100%);
+    
+    /* Shadows with comic personality */
+    --shadow-card: var(--comic-shadow-sm);
+    --shadow-elevated: var(--comic-shadow);
+    --shadow-soft: 0 4px 20px hsl(201 82% 44% / 0.15);
+    
+    --transition-smooth: all 0.2s ease-out;
     --spacing-section: 6rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 201 82% 44%;
   }
 
   .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 210 35% 10%;
+    --foreground: 210 20% 95%;
 
-    --card: 217 32% 18%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 30% 15%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 217 32% 18%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 30% 15%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 201 75% 55%;
+    --primary-foreground: 210 35% 10%;
 
-    --secondary: 217 32% 25%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 25 85% 60%;
+    --secondary-foreground: 210 35% 10%;
 
-    --muted: 217 32% 25%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 25% 20%;
+    --muted-foreground: 210 15% 60%;
 
-    --accent: 43 96% 56%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 145 60% 50%;
+    --accent-foreground: 210 35% 10%;
 
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --highlight: 48 90% 55%;
+    --highlight-foreground: 210 40% 15%;
 
-    --border: 217 32% 25%;
-    --input: 217 32% 25%;
-    --ring: 217 91% 60%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(202 82% 25%) 0%, hsl(202 82% 40%) 50%, hsl(202 82% 35%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(217 32% 18%) 0%, hsl(217 32% 22%) 100%);
-    --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.2);
-    --hero-glow: 0 0 60px hsl(202 82% 44% / 0.2);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 210 25% 25%;
+    --input: 210 25% 25%;
+    --ring: 201 75% 55%;
+
+    --comic-border: 3px solid hsl(210 20% 80%);
+    --comic-border-thick: 4px solid hsl(210 20% 80%);
+    --comic-shadow: 6px 6px 0 hsl(210 20% 80%);
+    --comic-shadow-sm: 4px 4px 0 hsl(210 20% 80%);
+    --comic-shadow-colored: 6px 6px 0 hsl(201 75% 45%);
+    
+    --panel-bg: hsl(210 30% 15%);
+    --panel-border: hsl(210 20% 80%);
+    
+    --halftone-pattern: radial-gradient(circle, hsl(210 20% 80% / 0.05) 1px, transparent 1px);
+    
+    --bubble-bg: hsl(210 30% 18%);
+    --bubble-border: hsl(210 20% 80%);
+    
+    --gradient-hero: linear-gradient(135deg, hsl(201 75% 45%) 0%, hsl(201 80% 35%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(25 85% 50%) 0%, hsl(15 80% 45%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(145 60% 40%) 0%, hsl(145 55% 30%) 100%);
+    
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    
+    --sidebar-background: 210 35% 10%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 201 75% 55%;
+    --sidebar-primary-foreground: 210 35% 10%;
+    --sidebar-accent: 210 25% 18%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 210 25% 25%;
+    --sidebar-ring: 201 75% 55%;
   }
 }
 
@@ -116,5 +158,223 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Comic Panel Card */
+  .comic-panel {
+    @apply bg-card rounded-lg relative overflow-hidden;
+    border: var(--comic-border);
+    box-shadow: var(--comic-shadow-sm);
+    transition: var(--transition-smooth);
+  }
+  
+  .comic-panel:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 hsl(var(--foreground));
+  }
+
+  /* Comic Speech Bubble */
+  .speech-bubble {
+    @apply bg-card rounded-2xl px-6 py-4 relative;
+    border: var(--comic-border);
+    box-shadow: var(--comic-shadow-sm);
+  }
+  
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-top-color: hsl(var(--foreground));
+    border-bottom: 0;
+  }
+  
+  .speech-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 32px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: hsl(var(--card));
+    border-bottom: 0;
+    z-index: 1;
+  }
+
+  /* Comic Action Button */
+  .comic-button {
+    @apply font-bold uppercase tracking-wide px-6 py-3 rounded-md;
+    border: var(--comic-border);
+    box-shadow: var(--comic-shadow-sm);
+    transition: var(--transition-smooth);
+  }
+  
+  .comic-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 hsl(var(--foreground));
+  }
+  
+  .comic-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 hsl(var(--foreground));
+  }
+
+  /* Halftone Background Pattern */
+  .halftone-bg {
+    background-image: var(--halftone-pattern);
+    background-size: 8px 8px;
+  }
+
+  /* Comic Headline with Impact */
+  .comic-headline {
+    @apply font-outfit font-black tracking-tight;
+    text-shadow: 3px 3px 0 hsl(var(--primary) / 0.2);
+  }
+
+  /* Team Success Badge */
+  .success-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wide;
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+    border: 2px solid hsl(var(--foreground));
+    box-shadow: 2px 2px 0 hsl(var(--foreground));
+  }
+
+  /* Hero Section Comic Style */
+  .comic-hero {
+    @apply relative overflow-hidden;
+    background: var(--gradient-hero);
+  }
+  
+  .comic-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--halftone-pattern);
+    background-size: 6px 6px;
+    opacity: 0.5;
+  }
+
+  /* Line Art Divider */
+  .line-divider {
+    @apply relative h-8 w-full overflow-hidden;
+  }
+  
+  .line-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 3px;
+    background: hsl(var(--foreground));
+    transform: translateY(-50%);
+  }
+  
+  .line-divider::after {
+    content: '★';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: hsl(var(--background));
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    color: hsl(var(--primary));
+  }
+
+  /* Service Card Comic Style */
+  .service-card {
+    @apply bg-card rounded-lg p-6;
+    border: var(--comic-border);
+    box-shadow: var(--comic-shadow-sm);
+    transition: var(--transition-smooth);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--comic-shadow);
+    border-color: hsl(var(--primary));
+  }
+
+  /* Icon Container Comic Style */
+  .comic-icon {
+    @apply w-14 h-14 rounded-lg flex items-center justify-center;
+    background: hsl(var(--primary) / 0.15);
+    border: 2px solid hsl(var(--primary));
+    box-shadow: 2px 2px 0 hsl(var(--primary));
+  }
+
+  /* Quote Block Comic Style */
+  .comic-quote {
+    @apply relative px-8 py-6 italic text-lg;
+    background: hsl(var(--highlight) / 0.3);
+    border-left: 5px solid hsl(var(--primary));
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  /* Feature List Item */
+  .feature-item {
+    @apply flex items-center gap-3 py-2;
+  }
+  
+  .feature-item::before {
+    content: '✓';
+    @apply flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold;
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+    border: 2px solid hsl(var(--foreground));
+  }
+
+  /* Page Title with Underline */
+  .page-title {
+    @apply relative inline-block;
+  }
+  
+  .page-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 4px;
+    background: hsl(var(--primary));
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  /* Utility for comic-style text emphasis */
+  .text-pop {
+    text-shadow: 2px 2px 0 hsl(var(--primary) / 0.3);
+  }
+  
+  /* Comic border utilities */
+  .border-comic {
+    border: var(--comic-border);
+  }
+  
+  .border-comic-thick {
+    border: var(--comic-border-thick);
+  }
+  
+  /* Shadow utilities */
+  .shadow-comic {
+    box-shadow: var(--comic-shadow);
+  }
+  
+  .shadow-comic-sm {
+    box-shadow: var(--comic-shadow-sm);
+  }
+  
+  .shadow-comic-colored {
+    box-shadow: var(--comic-shadow-colored);
   }
 }

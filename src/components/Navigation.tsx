@@ -11,45 +11,50 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b-3 border-foreground">
       <div className="container">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={waltersworksLogo} alt="WaltersWorks" className="w-8 h-8 flex-shrink-0" />
-            <div className="hidden sm:block text-xl md:text-2xl text-foreground tracking-tight">
-              <span className="font-muli font-black">WALTERS</span><span className="font-muli font-extralight italic">WORKS</span>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img 
+              src={waltersworksLogo} 
+              alt="WaltersWorks" 
+              className="w-8 h-8 flex-shrink-0 group-hover:scale-110 transition-transform" 
+            />
+            <div className="hidden sm:block text-xl md:text-2xl text-foreground tracking-tight font-bold">
+              <span className="font-muli font-black">WALTERS</span>
+              <span className="font-muli font-extralight italic">WORKS</span>
             </div>
           </Link>
           
           <div className="hidden md:flex items-center gap-8">
             <Link 
               to="/"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide"
             >
               Home
             </Link>
             <Link 
               to="/execworks"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide"
             >
               ExecWorks
             </Link>
             <Link 
               to="/dataworks"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide"
             >
               DataWorks
             </Link>
             <Link 
               to="/webworks"
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide"
             >
               WebWorks
             </Link>
             {!isHome && (
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="text-foreground hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide"
               >
                 Contact
               </button>
@@ -57,14 +62,8 @@ export const Navigation = () => {
           </div>
 
           <Button 
-            onClick={() => {
-              if (isHome) {
-                scrollToSection('contact');
-              } else {
-                scrollToSection('contact');
-              }
-            }}
-            className="bg-primary text-primary-foreground hover:bg-primary/90 font-outfit font-medium"
+            onClick={() => scrollToSection('contact')}
+            className="comic-button bg-secondary text-secondary-foreground hover:bg-secondary/90 font-outfit font-bold text-sm"
           >
             Get Started
           </Button>

@@ -3,9 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// Determine the base path from an environment variable, defaulting to '/' 
+// Determine the base path from an environment variable, defaulting to '/'
 // which is correct for your opendoug.github.io User Site.
-const BASE_PATH = process.env.VITE_BASE_PATH || '/';
+const BASE_PATH = process.env.VITE_BASE_PATH || "/";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -20,5 +20,5 @@ export default defineConfig(({ mode }) => ({
     },
   },
   // Apply the variable base path here
-  base: BASE_PATH, 
+  base: BASE_PATH,
 }));

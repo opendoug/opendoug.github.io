@@ -1,4 +1,3 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Briefcase, TrendingUp, Users, Database, Globe, Lightbulb } from "lucide-react";
 
 const services = [
@@ -36,10 +35,10 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="services" className="py-24 halftone-bg">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-outfit font-bold text-4xl md:text-5xl text-foreground mb-4">
+          <h2 className="comic-headline text-4xl md:text-5xl text-foreground mb-4">
             <span className="text-primary">Leadership</span> & Growth Services
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -49,20 +48,18 @@ export const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card 
+            <div 
               key={index}
-              className="group hover:shadow-[var(--shadow-elegant)] transition-all duration-300 border-border bg-[var(--gradient-card)] hover:-translate-y-1"
+              className="service-card group"
             >
-              <CardHeader>
-                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="h-7 w-7 text-primary" />
-                </div>
-                <CardTitle className="font-outfit text-xl mb-2">{service.title}</CardTitle>
-                <CardDescription className="text-base leading-relaxed">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-            </Card>
+              <div className="comic-icon mb-4 group-hover:shadow-comic-colored transition-all">
+                <service.icon className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-outfit font-bold text-xl text-foreground mb-2">{service.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {service.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>

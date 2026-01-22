@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import waltersworksLogo from "@/assets/waltersworks-logo.png";
+import waltersworksLogo from "@/assets/waltersworks-logo-new.png";
 
 export const Navigation = () => {
   const location = useLocation();

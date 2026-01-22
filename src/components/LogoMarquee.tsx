@@ -19,6 +19,10 @@ const logos: Logo[] = [
   { name: "Airbyte", domain: "airbyte.com", src: "https://cdn.worldvectorlogo.com/logos/airbyte-1.svg" },
   { name: "dbt", domain: "getdbt.com", src: "https://cdn.worldvectorlogo.com/logos/dbt.svg" },
   { name: "Metabase", domain: "metabase.com", src: "https://cdn.worldvectorlogo.com/logos/metabase.svg" },
+  { name: "Quo", domain: "quo.app", src: "https://cdn.worldvectorlogo.com/logos/openphone.svg" },
+  { name: "Make", domain: "make.com", src: "https://cdn.worldvectorlogo.com/logos/make-1.svg" },
+  { name: "Zapier", domain: "zapier.com", src: "https://cdn.worldvectorlogo.com/logos/zapier-1.svg" },
+  { name: "IFTTT", domain: "ifttt.com", src: "https://cdn.worldvectorlogo.com/logos/ifttt-1.svg" },
 ];
 
 export const LogoMarquee = () => {

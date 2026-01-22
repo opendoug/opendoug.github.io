@@ -2,7 +2,8 @@ import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Database, Code2, Sparkles, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import waltersworksLogo from "@/assets/waltersworks-logo.png";
+import waltersworksLogo from "@/assets/waltersworks-logo-new.png";
+import { ScrollingTestimonials } from "@/components/ScrollingTestimonials";
 
 const Home = () => {
   return (
@@ -10,7 +11,8 @@ const Home = () => {
       <Navigation />
       <main>
         {/* Hero Section - Comic Style */}
-        <section className="comic-hero min-h-[90vh] flex items-center relative">
+        <section className="comic-hero min-h-[90vh] flex items-center relative overflow-hidden">
+          <ScrollingTestimonials />
           <div className="container relative z-10 py-20">
             <div className="max-w-4xl mx-auto text-center">
               {/* Logo with comic pop effect */}

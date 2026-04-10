@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <ww-nav></ww-nav>
@@ -15,14 +16,14 @@
     <main>
         <!-- Triage Hero -->
         <section class="comic-hero py-24" style="background: var(--gradient-warm);">
-            <div class="container" style="position: relative; z-index: 10;">
+            <div class="container">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
+                    <div class="md:text-left text-center">
                         <div class="success-badge mb-6">★ 2024 Showcase</div>
-                        <h1 class="comic-headline" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem;">
-                            From <span style="color: hsl(var(--highlight));">Chaos</span> to Calendar.
+                        <h1 class="comic-headline text-5xl mb-6">
+                            From <span style="color: hsl(var(--highlight));">Chaos</span> <br>to Calendar.
                         </h1>
-                        <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem;">
+                        <p class="text-xl max-w-prose mb-8" style="opacity: 0.95;">
                             We transformed a manual, high-stress triage process into an automated scheduling engine.
                         </p>
                     </div>
@@ -30,73 +31,83 @@
             </div>
         </section>
 
-        <!-- Chaos Phase -->
+        <!-- The Chaos Phase -->
         <section class="py-24 halftone-bg">
             <div class="container">
-                <div class="grid md:grid-cols-2 gap-12 bg-white rounded-lg border-comic p-12">
+                <div class="comic-panel grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 class="comic-headline text-pop" style="font-size: 2.5rem; margin-bottom: 1.5rem;">The <span style="color: hsl(var(--destructive));">Chaos</span> Phase</h2>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 1rem; display: flex; gap: 0.5rem; align-items: start;">
-                                <span style="color: red; font-weight: bold;">✕</span>
-                                <div><strong>Information Overload:</strong> Hundreds of tasks trapped in unread emails and Slack pings.</div>
+                        <h2 class="comic-headline text-4xl mb-6">The <span style="color: hsl(var(--destructive));">Chaos</span> Phase</h2>
+                        <ul class="flex flex-col gap-6" style="list-style: none;">
+                            <li class="flex gap-4">
+                                <div class="comic-icon" style="background: hsl(var(--destructive) / 0.1); border-color: hsl(var(--destructive));">
+                                    <i data-lucide="alert-circle" style="color: hsl(var(--destructive));"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-lg">Information Overload</h4>
+                                    <p class="text-muted">Hundreds of tasks trapped in unread emails and Slack pings.</p>
+                                </div>
                             </li>
-                            <li style="margin-bottom: 1rem; display: flex; gap: 0.5rem; align-items: start;">
-                                <span style="color: red; font-weight: bold;">✕</span>
-                                <div><strong>Manual Friction:</strong> Hours spent every morning manually entering tasks into a calendar.</div>
-                            </li>
-                            <li style="margin-bottom: 1rem; display: flex; gap: 0.5rem; align-items: start;">
-                                <span style="color: red; font-weight: bold;">✕</span>
-                                <div><strong>Cognitive Drain:</strong> Deciding "What do I do next?" was the hardest part of the day.</div>
+                            <li class="flex gap-4">
+                                <div class="comic-icon" style="background: hsl(var(--destructive) / 0.1); border-color: hsl(var(--destructive));">
+                                    <i data-lucide="clock" style="color: hsl(var(--destructive));"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-lg">Manual Friction</h4>
+                                    <p class="text-muted">Hours spent every morning manually entering tasks into a calendar.</p>
+                                </div>
                             </li>
                         </ul>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="comic-panel" style="background: hsl(var(--muted)/0.5); transform: rotate(-2deg); display: flex; align-items: center; justify-content: center; min-height: 200px;">
+                            <i data-lucide="layers" style="width: 4rem; height: 4rem; opacity: 0.2;"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- The Solution Pipeline -->
-        <section class="py-24" style="background: white;">
+        <!-- The Pipeline -->
+        <section class="py-24 bg-card">
             <div class="container">
                 <div class="text-center mb-16">
-                    <h2 class="comic-headline" style="font-size: 2.5rem;">The <span style="color: hsl(var(--primary));">Automation</span> Pipeline</h2>
+                    <h2 class="comic-headline text-4xl mb-4">The <span class="text-primary">Automation</span> Pipeline</h2>
+                    <p class="text-lg text-muted">A four-phase journey from voice to flow</p>
                 </div>
                 
-                <div class="grid md:grid-cols-4 gap-6">
-                    <div class="comic-panel p-6 text-center">
-                        <div class="comic-icon mx-auto mb-4">🎤</div>
-                        <h3 class="font-bold mb-2">Capture</h3>
-                        <p style="font-size: 0.875rem;">Voice memos and emails processed by AI.</p>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="comic-panel text-center">
+                        <div class="comic-icon mx-auto mb-6"><i data-lucide="mic" class="text-primary"></i></div>
+                        <h3 class="font-bold text-xl mb-3">Capture</h3>
+                        <p class="text-sm text-muted">Voice memos and emails processed by AI.</p>
                     </div>
-                    <div class="comic-panel p-6 text-center">
-                        <div class="comic-icon mx-auto mb-4">🧠</div>
-                        <h3 class="font-bold mb-2">Refine</h3>
-                        <p style="font-size: 0.875rem;">Tasks are automatically tagged and prioritized.</p>
+                    <div class="comic-panel text-center">
+                        <div class="comic-icon mx-auto mb-6"><i data-lucide="brain" class="text-primary"></i></div>
+                        <h3 class="font-bold text-xl mb-3">Refine</h3>
+                        <p class="text-sm text-muted">AI categorizes and prioritizes every task.</p>
                     </div>
-                    <div class="comic-panel p-6 text-center">
-                        <div class="comic-icon mx-auto mb-4">📅</div>
-                        <h3 class="font-bold mb-2">Schedule</h3>
-                        <p style="font-size: 0.875rem;">Placed directly into optimized calendar slots.</p>
+                    <div class="comic-panel text-center">
+                        <div class="comic-icon mx-auto mb-6"><i data-lucide="calendar" class="text-primary"></i></div>
+                        <h3 class="font-bold text-xl mb-3">Schedule</h3>
+                        <p class="text-sm text-muted">Optimized slots found automatically.</p>
                     </div>
-                    <div class="comic-panel p-6 text-center">
-                        <div class="comic-icon mx-auto mb-4">🌊</div>
-                        <h3 class="font-bold mb-2">Flow</h3>
-                        <p style="font-size: 0.875rem;">Users wake up to a perfectly organized day.</p>
+                    <div class="comic-panel text-center">
+                        <div class="comic-icon mx-auto mb-6"><i data-lucide="check-circle" class="text-primary"></i></div>
+                        <h3 class="font-bold text-xl mb-3">Flow</h3>
+                        <p class="text-sm text-muted">The user wakes up to a perfect day.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-12 border-t-3 border-foreground" style="background: hsl(var(--muted) / 0.5);">
-        <div class="container text-center">
-            <div class="flex items-center justify-center gap-3 mb-4">
-                <img src="assets/waltersworks-logo.png" alt="WaltersWorks" style="width: 2rem; height: 2rem;">
-                <span style="color: hsl(var(--muted-foreground));">© 2024 WALTERSWORKS</span>
-            </div>
-        </div>
-    </footer>
+    <ww-footer></ww-footer>
 
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => lucide.createIcons(), 500);
+        });
+    </script>
 </body>
 </html>

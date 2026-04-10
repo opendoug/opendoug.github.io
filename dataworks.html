@@ -8,20 +8,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <ww-nav></ww-nav>
 
     <main>
         <section class="comic-hero py-24" style="background: var(--gradient-success);">
-            <div class="container" style="position: relative; z-index: 10;">
+            <div class="container">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
+                    <div class="md:text-left text-center">
                         <div class="success-badge mb-6">★ Data Excellence</div>
-                        <h1 class="comic-headline" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem;">
+                        <h1 class="comic-headline text-5xl mb-6">
                             Actionable Insights, <br><span style="color: hsl(var(--highlight));">No Fluff.</span>
                         </h1>
-                        <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem;">
+                        <p class="text-xl max-w-prose mb-8" style="opacity: 0.95;">
                             Stop drowning in data and start driving growth. We build the pipelines that turn raw information into strategic intelligence.
                         </p>
                     </div>
@@ -32,35 +33,39 @@
         <section class="py-24 halftone-bg">
             <div class="container">
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="service-card">
-                        <div class="comic-icon mb-4">🏗️</div>
-                        <h3 class="font-bold text-xl mb-3">Modern Data Stack</h3>
-                        <p style="color: hsl(var(--muted-foreground));">Fivetran, dbt, and Cloud Data Warehouses for robust, scalable infrastructure.</p>
+                    <div class="comic-panel">
+                        <div class="comic-icon mb-6"><i data-lucide="layers" class="text-primary"></i></div>
+                        <h3 class="font-bold text-2xl mb-3">Modern Data Stack</h3>
+                        <p class="text-sm text-muted">Fivetran, dbt, and Cloud Data Warehouses for robust, scalable infrastructure.</p>
                     </div>
-                    <div class="service-card">
-                        <div class="comic-icon mb-4">📈</div>
-                        <h3 class="font-bold text-xl mb-3">Analytics Engineering</h3>
-                        <p style="color: hsl(var(--muted-foreground));">Clean, modeled data that looks the same across every dashboard.</p>
+                    <div class="comic-panel">
+                        <div class="comic-icon mb-6"><i data-lucide="bar-chart-3" class="text-primary"></i></div>
+                        <h3 class="font-bold text-2xl mb-3">Analytics Engineering</h3>
+                        <p class="text-sm text-muted">Clean, modeled data that looks the same across every dashboard.</p>
                     </div>
-                    <div class="service-card">
-                        <div class="comic-icon mb-4">🎯</div>
-                        <h3 class="font-bold text-xl mb-3">Business Intelligence</h3>
-                        <p style="color: hsl(var(--muted-foreground));">Self-service reporting that actually answers business questions.</p>
+                    <div class="comic-panel">
+                        <div class="comic-icon mb-6"><i data-lucide="target" class="text-primary"></i></div>
+                        <h3 class="font-bold text-2xl mb-3">Business Intelligence</h3>
+                        <p class="text-sm text-muted">Self-service reporting that actually answers business questions.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Triage CTA -->
-        <section class="py-24" style="background: hsl(var(--secondary) / 0.05); border-y: 3px solid hsl(var(--foreground));">
+        <section class="py-24 bg-card border-t border-b border-foreground">
             <div class="container text-center">
-                <div class="bg-card border-comic p-12 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10" style="font-size: 8rem;">🚀</div>
-                    <h2 class="comic-headline" style="font-size: 2.5rem; margin-bottom: 1.5rem;">See it in <span style="color: hsl(var(--secondary));">Action</span></h2>
-                    <p style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <div class="comic-panel mx-auto relative overflow-hidden" style="max-width: 900px;">
+                    <div style="position: absolute; top: 0; right: 0; opacity: 0.05; transform: translate(25%, -25%);">
+                        <i data-lucide="rocket" style="width: 20rem; height: 20rem;"></i>
+                    </div>
+                    <h2 class="comic-headline text-4xl mb-6">See it in <span class="text-secondary">Action</span></h2>
+                    <p class="text-lg mx-auto mb-8 max-w-prose">
                         Our Triage app is a perfect example of how we combine data engineering with automation to solve real operational pain.
                     </p>
-                    <a href="triage.html" class="comic-button bg-secondary">View Case Study</a>
+                    <a href="triage.html" class="comic-button bg-secondary">
+                        View Case Study <i data-lucide="arrow-right" class="ml-2"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -69,5 +74,10 @@
     <ww-footer></ww-footer>
 
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => lucide.createIcons(), 500);
+        });
+    </script>
 </body>
 </html>

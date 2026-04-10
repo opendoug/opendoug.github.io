@@ -13,25 +13,28 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <!-- Navigation Placeholder -->
+    <!-- Shared component placeholder -->
     <ww-nav></ww-nav>
 
     <main>
         <!-- Hero Section -->
-        <section class="comic-hero py-24" style="min-height: 80vh; display: flex; align-items: center;">
-            <div class="container" style="position: relative; z-index: 10;">
+        <section class="comic-hero py-24" style="min-height: 85vh; display: flex; align-items: center;">
+            <div class="container">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
+                    <div class="md:text-left text-center">
                         <div class="success-badge mb-6">★ Established Strategy</div>
-                        <h1 class="comic-headline" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem;">
-                            Your Business, <br><span style="color: hsl(var(--highlight));">Accelerated.</span>
+                        <h1 class="comic-headline text-5xl mb-6">
+                            Your Business, <br><span class="text-secondary" style="color: hsl(var(--highlight));">Accelerated.</span>
                         </h1>
-                        <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; max-width: 500px;">
+                        <p class="text-xl max-w-prose mb-8" style="opacity: 0.95;">
                             We provide Fractional C-Suite leadership and customized technology enablement to transform your operations and drive measurable growth.
                         </p>
-                        <div class="flex gap-4">
+                        <div class="flex gap-4 justify-center md:justify-start">
                             <a href="#contact" class="comic-button bg-secondary">Get Started</a>
                             <a href="execworks.html" class="comic-button" style="background: white; color: black;">Learn More</a>
                         </div>
@@ -40,108 +43,105 @@
             </div>
         </section>
 
-        <!-- Services Section Preview -->
+        <!-- Pillars Section -->
         <section class="py-24 halftone-bg">
             <div class="container">
                 <div class="text-center mb-16">
-                    <h2 class="comic-headline" style="font-size: 2.5rem; margin-bottom: 1rem;">Core <span style="color: hsl(var(--primary));">Pillars</span></h2>
-                    <p style="color: hsl(var(--muted-foreground)); font-size: 1.125rem;">Four ways we help your business scale with confidence</p>
+                    <h2 class="comic-headline text-4xl mb-4">Core <span class="text-primary">Pillars</span></h2>
+                    <p class="text-lg text-muted">Four ways we help your business scale with confidence</p>
                 </div>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- ExecWorks -->
-                    <a href="execworks.html" class="comic-panel p-6" style="text-decoration: none; color: inherit;">
-                        <div class="comic-icon mb-4" style="background: hsl(var(--primary) / 0.1); border-color: hsl(var(--primary));">
-                           <span style="font-size: 1.5rem;">👔</span>
+                    <a href="execworks.html" class="comic-panel flex flex-col items-center text-center" style="text-decoration: none; color: inherit;">
+                        <div class="comic-icon mb-6">
+                            <i data-lucide="briefcase" class="text-primary"></i>
                         </div>
-                        <h3 class="font-bold text-xl mb-2">ExecWorks</h3>
-                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">Fractional C-Suite leadership to guide your strategy and growth.</p>
+                        <h3 class="font-bold text-2xl mb-3">ExecWorks</h3>
+                        <p class="text-sm text-muted">Fractional C-Suite leadership to guide your strategy and growth.</p>
                     </a>
                     
                     <!-- DataWorks -->
-                    <a href="dataworks.html" class="comic-panel p-6" style="text-decoration: none; color: inherit;">
-                        <div class="comic-icon mb-4" style="background: hsl(var(--accent) / 0.1); border-color: hsl(var(--accent));">
-                            <span style="font-size: 1.5rem;">📊</span>
+                    <a href="dataworks.html" class="comic-panel flex flex-col items-center text-center" style="text-decoration: none; color: inherit;">
+                        <div class="comic-icon mb-6" style="border-color: hsl(var(--accent)); background: hsl(var(--accent) / 0.1);">
+                            <i data-lucide="database" style="color: hsl(var(--accent));"></i>
                         </div>
-                        <h3 class="font-bold text-xl mb-2">DataWorks</h3>
-                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">Modern data stacks and analytics that drive better decisions.</p>
+                        <h3 class="font-bold text-2xl mb-3">DataWorks</h3>
+                        <p class="text-sm text-muted">Modern data stacks and analytics that drive better decisions.</p>
                     </a>
                     
                     <!-- WebWorks -->
-                    <a href="webworks.html" class="comic-panel p-6" style="text-decoration: none; color: inherit;">
-                        <div class="comic-icon mb-4" style="background: hsl(var(--secondary) / 0.1); border-color: hsl(var(--secondary));">
-                            <span style="font-size: 1.5rem;">💻</span>
+                    <a href="webworks.html" class="comic-panel flex flex-col items-center text-center" style="text-decoration: none; color: inherit;">
+                        <div class="comic-icon mb-6" style="border-color: hsl(var(--secondary)); background: hsl(var(--secondary) / 0.1);">
+                            <i data-lucide="layout" class="text-secondary"></i>
                         </div>
-                        <h3 class="font-bold text-xl mb-2">WebWorks</h3>
-                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">High-performance web applications built for scale.</p>
+                        <h3 class="font-bold text-2xl mb-3">WebWorks</h3>
+                        <p class="text-sm text-muted">High-performance web applications built for scale.</p>
                     </a>
 
                     <!-- Triage -->
-                    <a href="triage.html" class="comic-panel p-6" style="text-decoration: none; color: inherit;">
-                        <div class="comic-icon mb-4" style="background: hsl(var(--highlight) / 0.1); border-color: hsl(var(--highlight));">
-                            <span style="font-size: 1.5rem;">🚀</span>
+                    <a href="triage.html" class="comic-panel flex flex-col items-center text-center" style="text-decoration: none; color: inherit;">
+                        <div class="comic-icon mb-6" style="border-color: hsl(var(--highlight)); background: hsl(var(--highlight) / 0.1);">
+                            <i data-lucide="zap" style="color: hsl(var(--highlight));"></i>
                         </div>
-                        <h3 class="font-bold text-xl mb-2">Triage</h3>
-                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">AI-powered automation to solve operational chaos.</p>
+                        <h3 class="font-bold text-2xl mb-3">Triage</h3>
+                        <p class="text-sm text-muted">AI-powered automation to solve operational chaos.</p>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Logo Marquee Section -->
-        <section class="py-16 bg-background overflow-hidden">
-            <div class="container" style="margin-bottom: 2rem;">
-                <h3 class="font-bold text-2xl text-center">Systems We've <span style="color: hsl(var(--primary));">Worked With</span></h3>
+        <!-- Logo Marquee -->
+        <section class="py-16 bg-background overflow-hidden border-t border-b border-border">
+            <div class="container text-center mb-12">
+                <h3 class="font-bold text-2xl">Systems We've <span class="text-primary">Worked With</span></h3>
             </div>
             
             <div class="relative">
-                <!-- Fade overlays -->
-                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 8rem; background: linear-gradient(to right, hsl(var(--background)), transparent); z-index: 10;"></div>
-                <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 8rem; background: linear-gradient(to left, hsl(var(--background)), transparent); z-index: 10;"></div>
+                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 10rem; background: linear-gradient(to right, hsl(var(--background)), transparent); z-index: 10;"></div>
+                <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 10rem; background: linear-gradient(to left, hsl(var(--background)), transparent); z-index: 10;"></div>
                 
                 <div class="flex overflow-hidden">
-                    <div class="animate-marquee gap-8 py-4">
-                        <!-- Logos -->
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://www.quickbase.com/images/quickbase-logo.svg" alt="QuickBase" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/Blog/Graphic/qb-logo-horizontal-preferred.svg" alt="QuickBooks" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://www.appfolioinc.com/hubfs/AppFolio-Logo.svg" alt="AppFolio" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Trello" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/google-workspace-icon.svg" alt="Workspace" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/ringcentral-1.svg" alt="RingCentral" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg" alt="Google Cloud" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
-                        <!-- Duplicate for loop -->
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://www.quickbase.com/images/quickbase-logo.svg" alt="QuickBase" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/Blog/Graphic/qb-logo-horizontal-preferred.svg" alt="QuickBooks" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://www.appfolioinc.com/hubfs/AppFolio-Logo.svg" alt="AppFolio" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
-                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Trello" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                    <div class="animate-marquee gap-12 py-4 items-center">
+                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://www.quickbase.com/images/quickbase-logo.svg" alt="QuickBase" style="width: 100%;"></div>
+                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/Blog/Graphic/qb-logo-horizontal-preferred.svg" alt="QuickBooks" style="width: 100%;"></div>
+                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://www.appfolioinc.com/hubfs/AppFolio-Logo.svg" alt="AppFolio" style="width: 100%;"></div>
+                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Trello" style="width: 100%;"></div>
+                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://cdn.worldvectorlogo.com/logos/google-workspace-icon.svg" alt="Workspace" style="width: 100%;"></div>
+                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://cdn.worldvectorlogo.com/logos/ringcentral-1.svg" alt="RingCentral" style="width: 100%;"></div>
+                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg" alt="Google Cloud" style="width: 100%;"></div>
+                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS" style="width: 100%;"></div>
+                        <!-- Loop Duplicate -->
+                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://www.quickbase.com/images/quickbase-logo.svg" alt="QuickBase" style="width: 100%;"></div>
+                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/Blog/Graphic/qb-logo-horizontal-preferred.svg" alt="QuickBooks" style="width: 100%;"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section Placeholder -->
-        <section id="contact" class="py-24" style="background: white;">
+        <!-- CTA Section -->
+        <section id="contact" class="py-24">
             <div class="container text-center">
-                <div class="comic-panel p-12" style="max-width: 800px; margin: 0 auto;">
-                    <h2 class="comic-headline" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Ready to <span style="color: hsl(var(--primary));">Talk?</span></h2>
-                    <p style="margin-bottom: 2rem;">Let's discuss how we can help you build something amazing.</p>
-                    <a href="mailto:doug@waltersworks.com" class="comic-button bg-primary">Schedule a Meeting</a>
+                <div class="comic-panel mx-auto" style="max-width: 800px;">
+                    <h2 class="comic-headline text-4xl mb-6">Ready to <span class="text-primary">Talk?</span></h2>
+                    <p class="text-lg mb-8">Let's discuss how we can help you build something amazing.</p>
+                    <a href="mailto:doug@waltersworks.com" class="comic-button bg-primary">
+                        Schedule a Meeting <i data-lucide="arrow-right" class="ml-2"></i>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-12 border-t-3 border-foreground" style="background: hsl(var(--muted) / 0.5);">
-        <div class="container text-center">
-            <div class="flex items-center justify-center gap-3 mb-4">
-                <img src="assets/waltersworks-logo.png" alt="WaltersWorks" style="width: 2rem; height: 2rem;">
-                <span style="color: hsl(var(--muted-foreground));">© 2024 WALTERSWORKS</span>
-            </div>
-        </div>
-    </footer>
+    <!-- Shared component placeholder -->
+    <ww-footer></ww-footer>
 
-    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script>
+        // Ensure icons render after main.js component loading
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => lucide.createIcons(), 500);
+        });
+    </script>
 </body>
 </html>

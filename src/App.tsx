@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import ExecWorks from "./pages/ExecWorks";
 import DataWorks from "./pages/DataWorks";
 import WebWorks from "./pages/WebWorks";
+import TriageWorks from "./pages/TriageWorks";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/execworks" element={<ExecWorks />} />
           <Route path="/dataworks" element={<DataWorks />} />
           <Route path="/webworks" element={<WebWorks />} />
+          <Route path="/triage" element={<TriageWorks />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

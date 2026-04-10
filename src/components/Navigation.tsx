@@ -51,6 +51,12 @@ export const Navigation = () => {
             >
               WebWorks
             </Link>
+            <Link 
+              to="/triage"
+              className="text-foreground hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide"
+            >
+              Triage
+            </Link>
             {!isHome && (
               <button 
                 onClick={() => scrollToSection('contact')}

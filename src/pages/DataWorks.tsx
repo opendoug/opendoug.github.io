@@ -168,6 +168,36 @@ const DataWorks = () => {
           </div>
         </section>
 
+        {/* Showcase CTA Section */}
+        <section className="py-24 bg-primary/5 halftone-bg border-y-4 border-foreground">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <div className="comic-panel p-8 md:p-12 bg-card text-center">
+                <div className="inline-block mb-6">
+                  <div className="success-badge">Case Study: Systems in Action</div>
+                </div>
+                <h2 className="comic-headline text-4xl md:text-5xl text-foreground mb-6">
+                  See what happens when <span className="text-primary font-black italic">Systems</span> work.
+                </h2>
+                <p className="text-xl text-muted-foreground mb-10">
+                  We don't just talk about data and automation - we build it. Check out <span className="font-bold text-foreground font-outfit uppercase tracking-tighter">Triage</span>, 
+                  one of our internal tools that transforms executive chaos into a perfectly structured workday.
+                </p>
+                <Button 
+                  size="lg"
+                  asChild
+                  className="comic-button bg-secondary text-secondary-foreground hover:bg-secondary/90 font-outfit font-bold text-xl group"
+                >
+                  <a href="#/triage">
+                    See the Triage App
+                    <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-2 transition-transform" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <LogoMarquee />
 
         <Contact />

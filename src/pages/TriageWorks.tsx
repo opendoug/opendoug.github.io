@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Brain, Zap, Calendar, Rocket, Sparkles, Filter, Shuffle, MousePointer2, ListTodo } from "lucide-react";
+import { ArrowRight, CheckCircle, Lightbulb, Zap, Calendar, Rocket, Sparkles, Filter, ArrowUpDown, Pointer, List } from "lucide-react";
 import { Contact } from "@/components/Contact";
 import waltersworksLogo from "@/assets/waltersworks-logo.png";
 
@@ -9,13 +9,13 @@ const comparisonData = [
     category: "(Input)",
     manual: "Manual Entry (Scattered lists across multiple apps)",
     triage: "Centralized Brain Dump (One frictionless capture point)",
-    icon: ListTodo
+    icon: List
   },
   {
     category: "(Processing)",
     manual: "Decision Fatigue (Agonizing over priority order)",
     triage: "AI Priority Sort (Algorithmic, instant ranking)",
-    icon: Shuffle
+    icon: ArrowUpDown
   },
   {
     category: "(Structuring)",
@@ -36,14 +36,14 @@ const phases = [
     phase: "Phase 1",
     title: "Unstructured Brain Dump",
     description: "Capture intent without worrying about order or timing. Just log the task and the estimated duration.",
-    icon: Brain,
+    icon: Lightbulb,
     color: "bg-primary/20"
   },
   {
     phase: "Phase 2",
     title: "AI Priority Sort",
     description: "Bypass decision fatigue. Let the engine determine what matters most using algorithmic instant ranking.",
-    icon: Shuffle,
+    icon: ArrowUpDown,
     color: "bg-secondary/20"
   },
   {
@@ -138,7 +138,7 @@ const TriageWorks = () => {
                   </div>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                   <div className="bg-background px-4 py-2 border-comic font-black text-xl rotate-[-2deg]">RAW THOUGHTS</div>
+                   <div className="bg-background px-4 py-2 border-comic font-black text-xl -rotate-2 uppercase tracking-tighter shadow-comic-sm">RAW THOUGHTS</div>
                 </div>
               </div>
 
@@ -159,7 +159,7 @@ const TriageWorks = () => {
                   ))}
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                   <div className="bg-background px-4 py-2 border-comic font-black text-xl rotate-[2deg]">ACTIONABLE SCHEDULE</div>
+                   <div className="bg-background px-4 py-2 border-comic font-black text-xl rotate-2 uppercase tracking-tighter shadow-comic-sm">ACTIONABLE SCHEDULE</div>
                 </div>
               </div>
             </div>

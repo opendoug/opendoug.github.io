@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Database, GitMerge, Zap, BarChart3, RefreshCw, Lock, Sparkles } from "lucide-react";
 import { Contact } from "@/components/Contact";
@@ -188,10 +189,10 @@ const DataWorks = () => {
                   asChild
                   className="comic-button bg-secondary text-secondary-foreground hover:bg-secondary/90 font-outfit font-bold text-xl group"
                 >
-                  <a href="#/triage">
+                  <Link to="/triage">
                     See the Triage App
                     <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-2 transition-transform" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>

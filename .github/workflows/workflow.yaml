@@ -1,5 +1,8 @@
 name: Deploy User Site to GitHub Pages
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
     branches:
@@ -31,9 +34,11 @@ jobs:
           # cache: 'npm'
 
       - name: 📦 Install dependencies & Build site
-        # This executes your package.json build script, which uses your vite.config.js (base: '/')
+        # Use npm ci for stricter, cleaner installs in CI environments
         run: |
-          npm install
+          pwd
+          ls -la
+          npm ci
           npm run build 
 
       - name: 📤 Upload Pages artifact

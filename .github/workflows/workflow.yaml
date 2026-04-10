@@ -26,9 +26,9 @@ jobs:
         # Use v4 for better security and stability
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
           # Optional: Use npm cache for faster runs
-          cache: 'npm'
+          # cache: 'npm'
 
       - name: 📦 Install dependencies & Build site
         # This executes your package.json build script, which uses your vite.config.js (base: '/')

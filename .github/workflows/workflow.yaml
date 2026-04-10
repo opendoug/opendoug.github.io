@@ -1,65 +1,35 @@
 name: Deploy User Site to GitHub Pages
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 on:
   push:
     branches:
-      - master # Updated to match your primary branch name
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+      - master
 
-# Configure necessary permissions for secure deployment
 permissions:
-  contents: read # Required for the 'checkout' action
-  pages: write # Required for publishing pages
-  id-token: write # Required for authentication
+  id-token: write 
+  contents: write 
+  pages: write    
 
 jobs:
-  # 1. Build job: Builds the site and uploads the artifact
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: ⬇️ Checkout code
-        # Use v4 for better security and stability
-        uses: actions/checkout@v4 
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: 🛠️ Setup Node.js
-        # Use v4 for better security and stability
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          # Optional: Use npm cache for faster runs
-          # cache: 'npm'
+          node-version: 22 
 
-      - name: 📦 Install dependencies & Build site
-        # Use npm ci for stricter, cleaner installs in CI environments
-        run: |
-          pwd
-          ls -la
-          npm ci
-          npm run build 
-
-      - name: 📤 Upload Pages artifact
-        # Official action to upload the build output
-        uses: actions/upload-pages-artifact@v3
+      - name: Vite GitHub Pages Deployer
+        uses: skywarth/vite-github-pages-deployer@v1.5.0
         with:
-          # This MUST match the directory where Vite outputs your built files
-          path: ./dist 
-
-  # 2. Deploy job: Runs only after the build job is successful
-  deploy:
-    environment:
-      # This links the job to the official GitHub Pages environment
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    # Crucially, this depends on the 'build' job finishing
-    needs: build 
-    
-    steps:
-      - name: 🚀 Deploy to GitHub Pages
-        id: deployment
-        # Official action to publish the uploaded artifact
-        uses: actions/deploy-pages@v4
+          public_base_path: /
+          build_path: ./dist
+          install_phase_node_env: dev
+          build_phase_node_env: production
+          package_manager: npm
+          artifact_name: github-pages
+          debug_mode: false
+          working_path: ./

@@ -3,7 +3,7 @@ name: Deploy User Site to GitHub Pages
 on:
   push:
     branches:
-      - main # Ensure this matches your branch name (main or master)
+      - master # Updated to match your primary branch name
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWorks | High-Performance Web Applications</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <ww-nav></ww-nav>
+
+    <main>
+        <section class="comic-hero py-24" style="background: var(--gradient-warm);">
+            <div class="container" style="position: relative; z-index: 10;">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="success-badge mb-6">★ Web Engineering</div>
+                        <h1 class="comic-headline" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem;">
+                            Web Apps that <br><span style="color: hsl(var(--highlight));">Actually Work.</span>
+                        </h1>
+                        <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem;">
+                            Fast, secure, and built for scale. We design web experiences that aren't just pretty—they're functional powerhouses for your business.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 halftone-bg">
+            <div class="container">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="comic-panel p-8">
+                        <div class="comic-icon mb-4">🚀</div>
+                        <h3 class="font-bold text-2xl mb-4">Speed is a Feature</h3>
+                        <p style="color: hsl(var(--muted-foreground));">We optimize every line of code to ensure your web presence is lighting fast, whether on a desktop in New York or a phone in rural Pennsylvania.</p>
+                    </div>
+                    <div class="comic-panel p-8">
+                        <div class="comic-icon mb-4">🛡️</div>
+                        <h3 class="font-bold text-2xl mb-4">Security First</h3>
+                        <p style="color: hsl(var(--muted-foreground));">Your data and your customers' trust are non-negotiable. We follow modern security best practices in every deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <ww-footer></ww-footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,27 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Professional Consultation Services | Expert Guidance</title>
-    <meta name="description" content="Transform your business with expert consultation services. Strategic guidance, professional support, and tailored solutions for your success." />
-    <meta name="author" content="Consultation Services" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaltersWorks | Strategic Leadership & Technology Enablement</title>
+    <meta name="description" content="Strategic leadership and technology enablement for modern businesses. Accelerating growth through data, web, and executive excellence.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Muli:wght@200;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Placeholder -->
+    <ww-nav></ww-nav>
 
-    <meta property="og:title" content="Professional Consultation Services | Expert Guidance" />
-    <meta property="og:description" content="Transform your business with expert consultation services. Strategic guidance, professional support, and tailored solutions for your success." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <main>
+        <!-- Hero Section -->
+        <section class="comic-hero py-24" style="min-height: 80vh; display: flex; align-items: center;">
+            <div class="container" style="position: relative; z-index: 10;">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="success-badge mb-6">★ Established Strategy</div>
+                        <h1 class="comic-headline" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem;">
+                            Your Business, <br><span style="color: hsl(var(--highlight));">Accelerated.</span>
+                        </h1>
+                        <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; max-width: 500px;">
+                            We provide Fractional C-Suite leadership and customized technology enablement to transform your operations and drive measurable growth.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#contact" class="comic-button bg-secondary">Get Started</a>
+                            <a href="execworks.html" class="comic-button" style="background: white; color: black;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        <!-- Services Section Preview -->
+        <section class="py-24 halftone-bg">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="comic-headline" style="font-size: 2.5rem; margin-bottom: 1rem;">Core <span style="color: hsl(var(--primary));">Pillars</span></h2>
+                    <p style="color: hsl(var(--muted-foreground)); font-size: 1.125rem;">Four ways we help your business scale with confidence</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- ExecWorks -->
+                    <a href="execworks.html" class="comic-panel p-6" style="text-decoration: none; color: inherit;">
+                        <div class="comic-icon mb-4" style="background: hsl(var(--primary) / 0.1); border-color: hsl(var(--primary));">
+                           <span style="font-size: 1.5rem;">👔</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">ExecWorks</h3>
+                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">Fractional C-Suite leadership to guide your strategy and growth.</p>
+                    </a>
+                    
+                    <!-- DataWorks -->
+                    <a href="dataworks.html" class="comic-panel p-6" style="text-decoration: none; color: inherit;">
+                        <div class="comic-icon mb-4" style="background: hsl(var(--accent) / 0.1); border-color: hsl(var(--accent));">
+                            <span style="font-size: 1.5rem;">📊</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">DataWorks</h3>
+                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">Modern data stacks and analytics that drive better decisions.</p>
+                    </a>
+                    
+                    <!-- WebWorks -->
+                    <a href="webworks.html" class="comic-panel p-6" style="text-decoration: none; color: inherit;">
+                        <div class="comic-icon mb-4" style="background: hsl(var(--secondary) / 0.1); border-color: hsl(var(--secondary));">
+                            <span style="font-size: 1.5rem;">💻</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">WebWorks</h3>
+                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">High-performance web applications built for scale.</p>
+                    </a>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                    <!-- Triage -->
+                    <a href="triage.html" class="comic-panel p-6" style="text-decoration: none; color: inherit;">
+                        <div class="comic-icon mb-4" style="background: hsl(var(--highlight) / 0.1); border-color: hsl(var(--highlight));">
+                            <span style="font-size: 1.5rem;">🚀</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Triage</h3>
+                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">AI-powered automation to solve operational chaos.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logo Marquee Section -->
+        <section class="py-16 bg-background overflow-hidden">
+            <div class="container" style="margin-bottom: 2rem;">
+                <h3 class="font-bold text-2xl text-center">Systems We've <span style="color: hsl(var(--primary));">Worked With</span></h3>
+            </div>
+            
+            <div class="relative">
+                <!-- Fade overlays -->
+                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 8rem; background: linear-gradient(to right, hsl(var(--background)), transparent); z-index: 10;"></div>
+                <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 8rem; background: linear-gradient(to left, hsl(var(--background)), transparent); z-index: 10;"></div>
+                
+                <div class="flex overflow-hidden">
+                    <div class="animate-marquee gap-8 py-4">
+                        <!-- Logos -->
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://www.quickbase.com/images/quickbase-logo.svg" alt="QuickBase" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/Blog/Graphic/qb-logo-horizontal-preferred.svg" alt="QuickBooks" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://www.appfolioinc.com/hubfs/AppFolio-Logo.svg" alt="AppFolio" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Trello" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/google-workspace-icon.svg" alt="Workspace" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/ringcentral-1.svg" alt="RingCentral" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg" alt="Google Cloud" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <!-- Duplicate for loop -->
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://www.quickbase.com/images/quickbase-logo.svg" alt="QuickBase" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/Blog/Graphic/qb-logo-horizontal-preferred.svg" alt="QuickBooks" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://www.appfolioinc.com/hubfs/AppFolio-Logo.svg" alt="AppFolio" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <div class="flex-shrink-0" style="width: 6rem; height: 4rem; filter: grayscale(1); opacity: 0.7;"><img src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Trello" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section Placeholder -->
+        <section id="contact" class="py-24" style="background: white;">
+            <div class="container text-center">
+                <div class="comic-panel p-12" style="max-width: 800px; margin: 0 auto;">
+                    <h2 class="comic-headline" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Ready to <span style="color: hsl(var(--primary));">Talk?</span></h2>
+                    <p style="margin-bottom: 2rem;">Let's discuss how we can help you build something amazing.</p>
+                    <a href="mailto:doug@waltersworks.com" class="comic-button bg-primary">Schedule a Meeting</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t-3 border-foreground" style="background: hsl(var(--muted) / 0.5);">
+        <div class="container text-center">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <img src="assets/waltersworks-logo.png" alt="WaltersWorks" style="width: 2rem; height: 2rem;">
+                <span style="color: hsl(var(--muted-foreground));">© 2024 WALTERSWORKS</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
 </html>

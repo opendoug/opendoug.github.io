@@ -3,73 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataWorks | Strategic Data Engineering & Analytics</title>
+    <title>DataWorks | Strategic Data Engineering &amp; Analytics</title>
+    <meta name="description" content="Data engineering and analytics from WaltersWorks. Modern data stacks, analytics engineering, and business intelligence that turn raw data into decisions.">
+    <link rel="icon" href="public/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body>
     <ww-nav></ww-nav>
 
     <main>
-        <section class="comic-hero" style="min-height: 80vh; display: flex; align-items: center; padding: var(--space-24) 0; background: var(--gradient-success);">
+        <!-- Hero -->
+        <section class="hero hero--teal">
             <div class="container">
-                <div class="grid md:grid-cols-12 gap-16 items-center">
-                    <div class="md:col-span-8 lg:col-span-7 md:text-left text-center">
-                        <div class="success-badge mb-8" style="font-size: 1rem; padding: 0.75rem 1.5rem;">★ Data Excellence</div>
-                        <h1 class="comic-headline" style="font-size: clamp(3.5rem, 8vw, 5.5rem); line-height: 1.0; margin-bottom: var(--space-8);">
-                            Actionable Insights, <br><span style="color: hsl(var(--highlight)); text-shadow: 4px 4px 0 hsl(var(--foreground));">No Fluff.</span>
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <div class="success-badge hero-badge">★ Data Excellence</div>
+                        <h1 class="comic-headline hero-title">
+                            Actionable Insights, <br><span class="pop">No Fluff.</span>
                         </h1>
-                        <p class="text-2xl mb-12" style="opacity: 0.95; line-height: 1.4; font-weight: 500;">
+                        <p class="hero-sub">
                             Stop drowning in data and start driving growth. We build the pipelines that turn raw information into strategic intelligence.
                         </p>
-                    </div>
-                    <div class="md:col-span-4 lg:col-span-5 hidden md:flex justify-center">
-                        <div class="comic-panel" style="width: 100%; height: 350px; transform: rotate(2deg); display: flex; align-items: center; justify-content: center; background: hsl(var(--highlight)/0.15); border-width: 4px;">
-                            <i data-lucide="database" style="width: 10rem; height: 10rem; color: hsl(var(--foreground)); opacity: 0.15;"></i>
+                        <div class="hero-actions">
+                            <a href="#contact" class="comic-button bg-secondary">Talk Data</a>
                         </div>
                     </div>
+                    <div class="hero-art">
+                        <img src="assets/hero-dataworks.jpg" alt="Comic-book hero flying through the clouds surrounded by data blocks">
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- What you get -->
         <section class="py-24 halftone-bg">
             <div class="container">
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="section-head">
+                    <h2 class="comic-headline text-4xl mb-4">What <span class="text-primary">DataWorks</span> Delivers</h2>
+                    <p>From scattered spreadsheets to a single source of truth.</p>
+                </div>
+
+                <div class="card-grid">
                     <div class="comic-panel">
-                        <div class="comic-icon mb-6"><i data-lucide="layers" class="text-primary"></i></div>
+                        <div class="comic-icon mb-6"><i data-lucide="layers"></i></div>
                         <h3 class="font-bold text-2xl mb-3">Modern Data Stack</h3>
-                        <p class="text-sm text-muted">Fivetran, dbt, and Cloud Data Warehouses for robust, scalable infrastructure.</p>
+                        <p class="text-sm text-muted">Managed pipelines, transformation tooling, and cloud data warehouses for robust, scalable infrastructure.</p>
                     </div>
                     <div class="comic-panel">
-                        <div class="comic-icon mb-6"><i data-lucide="bar-chart-3" class="text-primary"></i></div>
+                        <div class="comic-icon mb-6"><i data-lucide="bar-chart-3"></i></div>
                         <h3 class="font-bold text-2xl mb-3">Analytics Engineering</h3>
-                        <p class="text-sm text-muted">Clean, modeled data that looks the same across every dashboard.</p>
+                        <p class="text-sm text-muted">Clean, documented, well-modeled data that means the same thing on every dashboard in the company.</p>
                     </div>
                     <div class="comic-panel">
-                        <div class="comic-icon mb-6"><i data-lucide="target" class="text-primary"></i></div>
+                        <div class="comic-icon mb-6"><i data-lucide="target"></i></div>
                         <h3 class="font-bold text-2xl mb-3">Business Intelligence</h3>
-                        <p class="text-sm text-muted">Self-service reporting that actually answers business questions.</p>
+                        <p class="text-sm text-muted">Self-service reporting that actually answers business questions — no analyst bottleneck required.</p>
+                    </div>
+                    <div class="comic-panel">
+                        <div class="comic-icon mb-6"><i data-lucide="workflow"></i></div>
+                        <h3 class="font-bold text-2xl mb-3">Automation &amp; AI</h3>
+                        <p class="text-sm text-muted">Workflow automation and AI-assisted processing that remove manual data drudgery from your team's day.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Triage CTA -->
-        <section class="py-24 bg-card border-t border-b border-foreground">
-            <div class="container text-center">
-                <div class="comic-panel mx-auto relative overflow-hidden" style="max-width: 900px;">
-                    <div style="position: absolute; top: 0; right: 0; opacity: 0.05; transform: translate(25%, -25%);">
-                        <i data-lucide="rocket" style="width: 20rem; height: 20rem;"></i>
+        <!-- Process -->
+        <section class="py-24">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="comic-headline text-4xl mb-4">How We <span class="text-primary">Work</span></h2>
+                    <p>A proven path from messy data to confident decisions.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="comic-panel text-center">
+                        <div class="comic-icon icon-accent mx-auto mb-6"><i data-lucide="search"></i></div>
+                        <h3 class="font-bold text-xl mb-3">1. Audit</h3>
+                        <p class="text-sm text-muted">Map your systems, data sources, and the questions you can't answer today.</p>
                     </div>
+                    <div class="comic-panel text-center">
+                        <div class="comic-icon icon-accent mx-auto mb-6"><i data-lucide="pencil-ruler"></i></div>
+                        <h3 class="font-bold text-xl mb-3">2. Architect</h3>
+                        <p class="text-sm text-muted">Design a right-sized stack — no over-engineering, no vendor lock-in surprises.</p>
+                    </div>
+                    <div class="comic-panel text-center">
+                        <div class="comic-icon icon-accent mx-auto mb-6"><i data-lucide="hammer"></i></div>
+                        <h3 class="font-bold text-xl mb-3">3. Build</h3>
+                        <p class="text-sm text-muted">Stand up pipelines, models, and dashboards in tight, reviewable increments.</p>
+                    </div>
+                    <div class="comic-panel text-center">
+                        <div class="comic-icon icon-accent mx-auto mb-6"><i data-lucide="graduation-cap"></i></div>
+                        <h3 class="font-bold text-xl mb-3">4. Enable</h3>
+                        <p class="text-sm text-muted">Train your team to own it, with documentation that outlives the engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Triage showcase CTA -->
+        <section class="py-24 halftone-bg">
+            <div class="container">
+                <div class="comic-panel cta-panel" style="max-width: 900px;">
                     <h2 class="comic-headline text-4xl mb-6">See it in <span class="text-secondary">Action</span></h2>
-                    <p class="text-lg mx-auto mb-8 max-w-prose">
+                    <p class="text-lg mb-8 max-w-prose mx-auto">
                         Our Triage app is a perfect example of how we combine data engineering with automation to solve real operational pain.
                     </p>
                     <a href="triage.html" class="comic-button bg-secondary">
-                        View Case Study <i data-lucide="arrow-right" class="ml-2"></i>
+                        View Case Study <i data-lucide="arrow-right" class="icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="contact" class="py-24">
+            <div class="container">
+                <div class="comic-panel cta-panel">
+                    <h2 class="comic-headline text-4xl mb-6">Drowning in <span class="text-primary">Data?</span></h2>
+                    <p class="text-lg mb-8">Let's map the shortest path from your data to your decisions.</p>
+                    <a href="mailto:doug@waltersworks.com" class="comic-button bg-primary">
+                        Schedule a Meeting <i data-lucide="arrow-right" class="icon"></i>
                     </a>
                 </div>
             </div>
@@ -79,10 +136,5 @@
     <ww-footer></ww-footer>
 
     <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => lucide.createIcons(), 500);
-        });
-    </script>
 </body>
 </html>

@@ -3,151 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WaltersWorks | Strategic Leadership & Technology Enablement</title>
-    <meta name="description" content="Strategic leadership and technology enablement for modern businesses. Accelerating growth through data, web, and executive excellence.">
-    
+    <title>WaltersWorks | Strategic Leadership &amp; Technology Enablement</title>
+    <meta name="description" content="Fractional C-Suite leadership, data engineering, and web development for modern businesses. ExecWorks, DataWorks, and WebWorks — three services, one partner.">
+    <link rel="icon" href="public/favicon.ico">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200..900&display=swap" rel="stylesheet">
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body>
-    <!-- Shared component placeholder -->
     <ww-nav></ww-nav>
 
     <main>
-        <!-- Hero Section -->
-        <section class="comic-hero" style="min-height: 90vh; display: flex; align-items: center; padding: var(--space-24) 0;">
-            <div class="container" style="position: relative; z-index: 10;">
-                <div class="grid md:grid-cols-12 gap-16 items-center">
-                    <div class="md:col-span-8 lg:col-span-7 md:text-left text-center">
-                        <div class="success-badge mb-8" style="font-size: 1rem; padding: 0.75rem 1.5rem;">★ Strategic C-Suite Leadership</div>
-                        <h1 class="comic-headline" style="font-size: clamp(3.5rem, 8vw, 6rem); line-height: 1.0; margin-bottom: var(--space-8);">
-                            Your Business, <br><span style="color: hsl(var(--highlight)); text-shadow: 4px 4px 0 hsl(var(--foreground));">Accelerated.</span>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <div class="success-badge hero-badge">★ Strategic C-Suite Leadership</div>
+                        <h1 class="comic-headline hero-title">
+                            Your Business, <br><span class="pop">Accelerated.</span>
                         </h1>
-                        <p class="text-2xl mb-12" style="opacity: 0.95; line-height: 1.4; font-weight: 500;">
-                            We provide Fractional C-Suite leadership and customized technology enablement to transform your operations and drive measurable growth.
+                        <p class="hero-sub">
+                            We provide fractional C-Suite leadership and customized technology enablement to transform your operations and drive measurable growth.
                         </p>
-                        <div class="flex gap-6 justify-center md:justify-start">
-                            <a href="#contact" class="comic-button bg-secondary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">Get Started</a>
-                            <a href="execworks.html" class="comic-button" style="background: white; color: black; font-size: 1.125rem; padding: 1rem 2.5rem;">Learn More</a>
+                        <div class="hero-actions">
+                            <a href="#contact" class="comic-button bg-secondary">Get Started</a>
+                            <a href="#services" class="comic-button btn-light">Explore Services</a>
                         </div>
                     </div>
-                    
-                    <div class="md:col-span-4 lg:col-span-5 hidden md:flex justify-center">
-                        <div class="comic-panel" style="width: 100%; height: 400px; transform: rotate(3deg); display: flex; items-center; justify-content: center; background: hsl(var(--highlight)/0.15); border-width: 5px;">
-                            <i data-lucide="rocket" style="width: 12rem; height: 12rem; color: hsl(var(--foreground)); opacity: 0.2;" class="animate-pulse"></i>
-                        </div>
+                    <div class="hero-art">
+                        <img src="assets/hero-home.jpg" alt="Comic-book hero soaring through the clouds carrying building blocks">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Pillars Section -->
-        <section class="py-24 halftone-bg">
+        <!-- Services -->
+        <section id="services" class="py-24 halftone-bg">
             <div class="container">
-                <div class="text-center mb-16">
-                    <h2 class="comic-headline text-4xl mb-4">Core <span class="text-primary">Pillars</span></h2>
-                    <p class="text-lg text-muted">Four ways we help your business scale with confidence</p>
+                <div class="section-head">
+                    <h2 class="comic-headline text-4xl mb-4">Three Services. <span class="text-primary">One Partner.</span></h2>
+                    <p>Executive leadership, data, and web — everything you need to scale with confidence.</p>
                 </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- ExecWorks -->
-                    <a href="execworks.html" class="comic-panel flex flex-col items-center text-center" style="text-decoration: none; color: inherit;">
+
+                <div class="card-grid">
+                    <a href="execworks.html" class="comic-panel">
                         <div class="comic-icon mb-6">
-                            <i data-lucide="briefcase" class="text-primary"></i>
+                            <i data-lucide="briefcase"></i>
                         </div>
                         <h3 class="font-bold text-2xl mb-3">ExecWorks</h3>
-                        <p class="text-sm text-muted">Fractional C-Suite leadership to guide your strategy and growth.</p>
-                    </a>
-                    
-                    <!-- DataWorks -->
-                    <a href="dataworks.html" class="comic-panel flex flex-col items-center text-center" style="text-decoration: none; color: inherit;">
-                        <div class="comic-icon mb-6" style="border-color: hsl(var(--accent)); background: hsl(var(--accent) / 0.1);">
-                            <i data-lucide="database" style="color: hsl(var(--accent));"></i>
-                        </div>
-                        <h3 class="font-bold text-2xl mb-3">DataWorks</h3>
-                        <p class="text-sm text-muted">Modern data stacks and analytics that drive better decisions.</p>
-                    </a>
-                    
-                    <!-- WebWorks -->
-                    <a href="webworks.html" class="comic-panel flex flex-col items-center text-center" style="text-decoration: none; color: inherit;">
-                        <div class="comic-icon mb-6" style="border-color: hsl(var(--secondary)); background: hsl(var(--secondary) / 0.1);">
-                            <i data-lucide="layout" class="text-secondary"></i>
-                        </div>
-                        <h3 class="font-bold text-2xl mb-3">WebWorks</h3>
-                        <p class="text-sm text-muted">High-performance web applications built for scale.</p>
+                        <p class="text-muted mb-4 flex-1">
+                            Fractional C-Suite leadership without the full-time overhead. Strategic planning, operational leadership, and mentoring that grows your team.
+                        </p>
+                        <span class="font-bold text-primary">Learn more →</span>
                     </a>
 
-                    <!-- Triage -->
-                    <a href="triage.html" class="comic-panel flex flex-col items-center text-center" style="text-decoration: none; color: inherit;">
-                        <div class="comic-icon mb-6" style="border-color: hsl(var(--highlight)); background: hsl(var(--highlight) / 0.1);">
-                            <i data-lucide="zap" style="color: hsl(var(--highlight));"></i>
+                    <a href="dataworks.html" class="comic-panel">
+                        <div class="comic-icon icon-accent mb-6">
+                            <i data-lucide="database"></i>
                         </div>
-                        <h3 class="font-bold text-2xl mb-3">Triage</h3>
-                        <p class="text-sm text-muted">AI-powered automation to solve operational chaos.</p>
+                        <h3 class="font-bold text-2xl mb-3">DataWorks</h3>
+                        <p class="text-muted mb-4 flex-1">
+                            Modern data stacks, analytics engineering, and business intelligence that turn raw information into decisions you can act on.
+                        </p>
+                        <span class="font-bold text-accent">Learn more →</span>
+                    </a>
+
+                    <a href="webworks.html" class="comic-panel">
+                        <div class="comic-icon icon-secondary mb-6">
+                            <i data-lucide="layout"></i>
+                        </div>
+                        <h3 class="font-bold text-2xl mb-3">WebWorks</h3>
+                        <p class="text-muted mb-4 flex-1">
+                            High-performance websites and web applications — fast, secure, and built to integrate with the systems that run your business.
+                        </p>
+                        <span class="font-bold text-secondary">Learn more →</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Logo Marquee -->
-        <section class="py-16 bg-background overflow-hidden border-t border-b border-border">
-            <div class="container text-center mb-12">
-                <h3 class="font-bold text-2xl">Systems We've <span class="text-primary">Worked With</span></h3>
-            </div>
-            
-            <div class="relative">
-                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 10rem; background: linear-gradient(to right, hsl(var(--background)), transparent); z-index: 10;"></div>
-                <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 10rem; background: linear-gradient(to left, hsl(var(--background)), transparent); z-index: 10;"></div>
-                
-                <div class="flex overflow-hidden">
-                    <div class="animate-marquee gap-12 py-4 items-center">
-                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://www.quickbase.com/images/quickbase-logo.svg" alt="QuickBase" style="width: 100%;"></div>
-                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/Blog/Graphic/qb-logo-horizontal-preferred.svg" alt="QuickBooks" style="width: 100%;"></div>
-                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://www.appfolioinc.com/hubfs/AppFolio-Logo.svg" alt="AppFolio" style="width: 100%;"></div>
-                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Trello" style="width: 100%;"></div>
-                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://cdn.worldvectorlogo.com/logos/google-workspace-icon.svg" alt="Workspace" style="width: 100%;"></div>
-                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://cdn.worldvectorlogo.com/logos/ringcentral-1.svg" alt="RingCentral" style="width: 100%;"></div>
-                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg" alt="Google Cloud" style="width: 100%;"></div>
-                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS" style="width: 100%;"></div>
-                        <!-- Loop Duplicate -->
-                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://www.quickbase.com/images/quickbase-logo.svg" alt="QuickBase" style="width: 100%;"></div>
-                        <div class="flex-shrink-0" style="width: 7rem; filter: grayscale(1); opacity: 0.6;"><img src="https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/Blog/Graphic/qb-logo-horizontal-preferred.svg" alt="QuickBooks" style="width: 100%;"></div>
+        <!-- Showcase strip -->
+        <section class="py-16">
+            <div class="container">
+                <div class="comic-panel split-grid">
+                    <div>
+                        <div class="success-badge mb-6">★ Showcase</div>
+                        <h2 class="comic-headline text-3xl mb-4">Triage: From Chaos to Calendar</h2>
+                        <p class="text-muted mb-6">
+                            See how we combined data engineering, automation, and AI to turn a manual, high-stress triage process into an automated scheduling engine.
+                        </p>
+                        <a href="triage.html" class="comic-button bg-primary">View Case Study <i data-lucide="arrow-right" class="icon"></i></a>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="comic-icon icon-highlight" style="width: 7rem; height: 7rem;">
+                            <i data-lucide="zap" style="width: 3.5rem; height: 3.5rem;"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
+        <!-- Systems marquee -->
+        <section class="py-16" style="border-top: 3px solid hsl(var(--foreground)); border-bottom: 3px solid hsl(var(--foreground));">
+            <div class="container text-center mb-8">
+                <h3 class="font-bold text-2xl">Systems We've <span class="text-primary">Worked With</span></h3>
+            </div>
+            <div class="marquee">
+                <div class="marquee-track">
+                    <span class="chip">QuickBase</span>
+                    <span class="chip">QuickBooks</span>
+                    <span class="chip">AppFolio</span>
+                    <span class="chip">Trello</span>
+                    <span class="chip">Google Workspace</span>
+                    <span class="chip">RingCentral</span>
+                    <span class="chip">Google Cloud</span>
+                    <span class="chip">AWS</span>
+                    <span class="chip" aria-hidden="true">QuickBase</span>
+                    <span class="chip" aria-hidden="true">QuickBooks</span>
+                    <span class="chip" aria-hidden="true">AppFolio</span>
+                    <span class="chip" aria-hidden="true">Trello</span>
+                    <span class="chip" aria-hidden="true">Google Workspace</span>
+                    <span class="chip" aria-hidden="true">RingCentral</span>
+                    <span class="chip" aria-hidden="true">Google Cloud</span>
+                    <span class="chip" aria-hidden="true">AWS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
         <section id="contact" class="py-24">
-            <div class="container text-center">
-                <div class="comic-panel mx-auto" style="max-width: 800px;">
+            <div class="container">
+                <div class="comic-panel cta-panel">
                     <h2 class="comic-headline text-4xl mb-6">Ready to <span class="text-primary">Talk?</span></h2>
                     <p class="text-lg mb-8">Let's discuss how we can help you build something amazing.</p>
                     <a href="mailto:doug@waltersworks.com" class="comic-button bg-primary">
-                        Schedule a Meeting <i data-lucide="arrow-right" class="ml-2"></i>
+                        Schedule a Meeting <i data-lucide="arrow-right" class="icon"></i>
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Shared component placeholder -->
     <ww-footer></ww-footer>
 
     <script src="js/main.js"></script>
-    <script>
-        // Ensure icons render after main.js component loading
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => lucide.createIcons(), 500);
-        });
-    </script>
 </body>
 </html>

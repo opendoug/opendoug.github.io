@@ -1,73 +1,39 @@
-# Welcome to your Lovable project
+# WaltersWorks
 
-## Project info
+Marketing site for **WaltersWorks** — strategic leadership and technology enablement for modern businesses.
 
-**URL**: https://lovable.dev/projects/73b6bf3b-a106-4bdc-a020-777bd26ed6ac
+**Services:** ExecWorks (fractional C-Suite leadership) • DataWorks (data engineering & analytics) • WebWorks (web development)
 
-## How can I edit this code?
+## Stack
 
-There are several ways of editing your application.
+Plain HTML, CSS, and vanilla JavaScript — no build step, no dependencies to install. Hosted on GitHub Pages.
 
-**Use Lovable**
+- [css/style.css](css/style.css) — design system centered on brand blue `#1489cd` (`hsl(202 82% 44%)`) with complementary orange, teal, and gold accents
+- [components/](components/) — shared navigation and footer, injected at runtime by [js/main.js](js/main.js)
+- [js/main.js](js/main.js) — component loading, mobile menu, smooth scrolling, active-link highlighting
+- [assets/](assets/) — logos and comic-style hero art
+- Icons via [Lucide](https://lucide.dev/) (CDN), font via Google Fonts (Outfit)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/73b6bf3b-a106-4bdc-a020-777bd26ed6ac) and start prompting.
+## Pages
 
-Changes made via Lovable will be committed automatically to this repo.
+| Page | Purpose |
+|---|---|
+| [index.html](index.html) | Home — services overview, showcase, contact |
+| [execworks.html](execworks.html) | ExecWorks — fractional C-Suite leadership |
+| [dataworks.html](dataworks.html) | DataWorks — data engineering & analytics |
+| [webworks.html](webworks.html) | WebWorks — web development |
+| [triage.html](triage.html) | Triage — automation case study / showcase |
+| [404.html](404.html) | Not-found page |
 
-**Use your preferred IDE**
+## Local development
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+The shared components are loaded with `fetch()`, so the site needs to be served over HTTP (opening files directly with `file://` won't load the nav/footer):
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# any static server works, e.g.
+python -m http.server 8000
+# or
+npx serve .
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/73b6bf3b-a106-4bdc-a020-777bd26ed6ac) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Then open http://localhost:8000.

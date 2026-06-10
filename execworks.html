@@ -3,67 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExecWorks | Fractional C-Suite & Strategic Leadership</title>
+    <title>ExecWorks | Fractional C-Suite &amp; Strategic Leadership</title>
+    <meta name="description" content="Fractional C-Suite leadership from WaltersWorks. Strategic planning, operational leadership, and executive mentoring — without the full-time overhead.">
+    <link rel="icon" href="public/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body>
     <ww-nav></ww-nav>
 
     <main>
-        <section class="comic-hero" style="min-height: 80vh; display: flex; align-items: center; padding: var(--space-24) 0;">
+        <!-- Hero -->
+        <section class="hero">
             <div class="container">
-                <div class="grid md:grid-cols-12 gap-16 items-center">
-                    <div class="md:col-span-8 lg:col-span-7 md:text-left text-center">
-                        <div class="success-badge mb-8" style="font-size: 1rem; padding: 0.75rem 1.5rem;">★ Strategic Leadership</div>
-                        <h1 class="comic-headline" style="font-size: clamp(3.5rem, 8vw, 5.5rem); line-height: 1.0; margin-bottom: var(--space-8);">
-                            Fractional Leadership, <br><span style="color: hsl(var(--highlight)); text-shadow: 4px 4px 0 hsl(var(--foreground));">Full Impact.</span>
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <div class="success-badge hero-badge">★ Strategic Leadership</div>
+                        <h1 class="comic-headline hero-title">
+                            Fractional Leadership, <br><span class="pop">Full Impact.</span>
                         </h1>
-                        <p class="text-2xl mb-12" style="opacity: 0.95; line-height: 1.4; font-weight: 500;">
+                        <p class="hero-sub">
                             High-level strategic guidance without the full-time overhead. We provide the vision and experience to navigate your company's most complex challenges.
                         </p>
-                    </div>
-                    <div class="md:col-span-4 lg:col-span-5 hidden md:flex justify-center">
-                        <div class="comic-panel" style="width: 100%; height: 350px; transform: rotate(-2deg); display: flex; align-items: center; justify-content: center; background: hsl(var(--highlight)/0.1); border-width: 4px;">
-                            <i data-lucide="briefcase" style="width: 10rem; height: 10rem; color: hsl(var(--foreground)); opacity: 0.15;"></i>
+                        <div class="hero-actions">
+                            <a href="#contact" class="comic-button bg-secondary">Start the Conversation</a>
                         </div>
+                    </div>
+                    <div class="hero-art hero-art--tilt-left">
+                        <img src="assets/hero-execworks.jpg" alt="Comic-book executive hero flying above the clouds with a strategic blueprint">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- What you get -->
         <section class="py-24 halftone-bg">
             <div class="container">
-                <div class="grid md:grid-cols-2 gap-12">
+                <div class="section-head">
+                    <h2 class="comic-headline text-4xl mb-4">What <span class="text-primary">ExecWorks</span> Delivers</h2>
+                    <p>Veteran executive horsepower, scoped to what your business actually needs.</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="comic-panel">
+                        <div class="comic-icon mb-6"><i data-lucide="compass"></i></div>
+                        <h3 class="font-bold text-2xl mb-3">Strategic Planning</h3>
+                        <p class="text-sm text-muted">Clear vision, prioritized roadmaps, and the operating cadence to execute against them quarter after quarter.</p>
+                    </div>
+                    <div class="comic-panel">
+                        <div class="comic-icon mb-6"><i data-lucide="settings"></i></div>
+                        <h3 class="font-bold text-2xl mb-3">Operational Leadership</h3>
+                        <p class="text-sm text-muted">Hands-on leadership of operations, process design, and the systems that keep your business running smoothly.</p>
+                    </div>
+                    <div class="comic-panel">
+                        <div class="comic-icon mb-6"><i data-lucide="users"></i></div>
+                        <h3 class="font-bold text-2xl mb-3">Team Mentoring</h3>
+                        <p class="text-sm text-muted">Coaching and developing your internal leaders so the capability stays with you long after the engagement.</p>
+                    </div>
+                    <div class="comic-panel">
+                        <div class="comic-icon mb-6"><i data-lucide="git-branch"></i></div>
+                        <h3 class="font-bold text-2xl mb-3">Technology Oversight</h3>
+                        <p class="text-sm text-muted">Vendor selection, build-vs-buy decisions, and digital transformation guidance from someone who has shipped it before.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The case for fractional -->
+        <section class="py-24">
+            <div class="container">
+                <div class="split-grid">
                     <div class="comic-panel">
                         <h3 class="comic-headline text-3xl mb-6">The Case for <span class="text-primary">Fractional</span></h3>
-                        <p class="mb-4">Building a world-class leadership team is expensive and time-consuming. Fractional leadership gives you access to veteran executives who can:</p>
-                        <ul class="flex flex-col gap-4" style="list-style: none;">
-                            <li class="flex items-center gap-3">
-                                <div class="success-badge" style="padding: 0.25rem 0.5rem; border-width: 1px;"><i data-lucide="check" style="width: 1rem; height: 1rem;"></i></div>
+                        <p class="mb-6">Building a world-class leadership team is expensive and time-consuming. Fractional leadership gives you access to veteran executives who can:</p>
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-mark"><i data-lucide="check"></i></span>
                                 <span class="font-bold">Design scalable organizational structures</span>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <div class="success-badge" style="padding: 0.25rem 0.5rem; border-width: 1px;"><i data-lucide="check" style="width: 1rem; height: 1rem;"></i></div>
+                            <li class="check-item">
+                                <span class="check-mark"><i data-lucide="check"></i></span>
                                 <span class="font-bold">Navigate complex digital transformations</span>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <div class="success-badge" style="padding: 0.25rem 0.5rem; border-width: 1px;"><i data-lucide="check" style="width: 1rem; height: 1rem;"></i></div>
+                            <li class="check-item">
+                                <span class="check-mark"><i data-lucide="check"></i></span>
                                 <span class="font-bold">Mentor and grow your internal leadership team</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-mark"><i data-lucide="check"></i></span>
+                                <span class="font-bold">Scale involvement up or down as your needs change</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="flex items-center justify-center">
-                        <div class="comic-panel" style="transform: rotate(2.5deg); background: hsl(var(--highlight)/0.1);">
-                            <p class="text-xl font-bold italic" style="line-height: 1.4;">
-                                <i data-lucide="quote" class="mb-4 text-primary"></i><br>
-                                "Leadership isn't about having all the answers, but about asking the right questions and building the systems that find them."
-                            </p>
-                        </div>
+                    <div class="comic-panel quote-panel">
+                        <i data-lucide="quote" class="text-primary mb-4"></i>
+                        <p>"Leadership isn't about having all the answers, but about asking the right questions and building the systems that find them."</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engagement models -->
+        <section class="py-24 halftone-bg">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="comic-headline text-4xl mb-4">How We <span class="text-primary">Engage</span></h2>
+                    <p>Three models, matched to where you are right now.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="comic-panel">
+                        <div class="comic-icon icon-accent mb-6"><i data-lucide="lightbulb"></i></div>
+                        <h3 class="font-bold text-2xl mb-3">Advisory</h3>
+                        <p class="text-sm text-muted">A standing monthly cadence of strategic counsel for founders and leadership teams that need a sounding board.</p>
+                    </div>
+                    <div class="comic-panel">
+                        <div class="comic-icon icon-accent mb-6"><i data-lucide="briefcase"></i></div>
+                        <h3 class="font-bold text-2xl mb-3">Embedded</h3>
+                        <p class="text-sm text-muted">A fractional executive working inside your business several days a week — owning outcomes, not just opinions.</p>
+                    </div>
+                    <div class="comic-panel">
+                        <div class="comic-icon icon-accent mb-6"><i data-lucide="flag"></i></div>
+                        <h3 class="font-bold text-2xl mb-3">Project-Based</h3>
+                        <p class="text-sm text-muted">Focused leadership for a defined initiative — a system migration, a reorganization, or a turnaround.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="contact" class="py-24">
+            <div class="container">
+                <div class="comic-panel cta-panel">
+                    <h2 class="comic-headline text-4xl mb-6">Need a <span class="text-primary">Leader?</span></h2>
+                    <p class="text-lg mb-8">Let's talk about where your business is headed and the leadership it takes to get there.</p>
+                    <a href="mailto:doug@waltersworks.com" class="comic-button bg-primary">
+                        Schedule a Meeting <i data-lucide="arrow-right" class="icon"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -72,10 +150,5 @@
     <ww-footer></ww-footer>
 
     <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => lucide.createIcons(), 500);
-        });
-    </script>
 </body>
 </html>

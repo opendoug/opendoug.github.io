@@ -9,8 +9,7 @@ Marketing site for **WaltersWorks** — strategic leadership and technology enab
 Plain HTML, CSS, and vanilla JavaScript — no build step, no dependencies to install. Hosted on GitHub Pages.
 
 - [css/style.css](css/style.css) — design system centered on brand blue `#1489cd` (`hsl(202 82% 44%)`) with complementary orange, teal, and gold accents
-- [components/](components/) — shared navigation and footer, injected at runtime by [js/main.js](js/main.js)
-- [js/main.js](js/main.js) — component loading, mobile menu, smooth scrolling, active-link highlighting
+- [js/main.js](js/main.js) — shared nav/footer templates (injected into `<ww-nav>`/`<ww-footer>` placeholders), mobile menu, smooth scrolling, active-link highlighting
 - [assets/](assets/) — logos and comic-style hero art
 - Icons via [Lucide](https://lucide.dev/) (CDN), font via Google Fonts (Outfit)
 
@@ -27,7 +26,7 @@ Plain HTML, CSS, and vanilla JavaScript — no build step, no dependencies to in
 
 ## Local development
 
-The shared components are loaded with `fetch()`, so the site needs to be served over HTTP (opening files directly with `file://` won't load the nav/footer):
+No build step — open any page directly in a browser, or serve the folder with a static server:
 
 ```sh
 # any static server works, e.g.

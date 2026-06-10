@@ -1,13 +1,91 @@
 /**
  * WaltersWorks Vanilla JS
+ *
+ * Shared components are defined as templates below and injected into the
+ * <ww-nav> / <ww-footer> placeholders on every page. No fetch() involved,
+ * so pages work over http:// and file:// alike.
  */
 
-document.addEventListener('DOMContentLoaded', async () => {
-    // 1. Inject shared components, then render icons once they exist in the DOM
-    await Promise.all([
-        loadComponent('ww-nav', 'components/navigation.html'),
-        loadComponent('ww-footer', 'components/footer.html')
-    ]);
+const NAV_HTML = `
+<header>
+    <div class="container nav-container">
+        <a href="index.html" class="brand">
+            <img src="assets/waltersworks-logo-new.png" alt="WaltersWorks logo">
+            <span class="brand-name"><strong>WALTERS</strong><em>WORKS</em></span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="execworks.html" class="nav-link">ExecWorks</a>
+            <a href="dataworks.html" class="nav-link">DataWorks</a>
+            <a href="webworks.html" class="nav-link">WebWorks</a>
+            <a href="triage.html" class="nav-link">Showcase</a>
+        </nav>
+
+        <a href="#contact" class="comic-button bg-secondary nav-cta">Get Started</a>
+
+        <button id="mobile-menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i data-lucide="menu" class="icon-menu"></i>
+            <i data-lucide="x" class="icon-close"></i>
+        </button>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="execworks.html" class="nav-link">ExecWorks</a>
+        <a href="dataworks.html" class="nav-link">DataWorks</a>
+        <a href="webworks.html" class="nav-link">WebWorks</a>
+        <a href="triage.html" class="nav-link">Showcase</a>
+        <a href="#contact" class="comic-button bg-secondary">Get Started</a>
+    </nav>
+</header>
+`;
+
+const FOOTER_HTML = `
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">
+                    <img src="assets/waltersworks-logo.png" alt="WaltersWorks logo">
+                    <span class="brand-name"><strong>WALTERS</strong><em>WORKS</em></span>
+                </div>
+                <p class="text-muted text-sm max-w-prose">
+                    Strategic leadership and technology enablement for modern businesses.
+                    Accelerating growth through executive, data, and web excellence.
+                </p>
+            </div>
+
+            <div>
+                <div class="footer-heading">Services</div>
+                <ul class="footer-links">
+                    <li><a href="execworks.html">ExecWorks</a></li>
+                    <li><a href="dataworks.html">DataWorks</a></li>
+                    <li><a href="webworks.html">WebWorks</a></li>
+                    <li><a href="triage.html">Triage Showcase</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="footer-heading">Contact</div>
+                <ul class="footer-links">
+                    <li><a href="mailto:doug@waltersworks.com">doug@waltersworks.com</a></li>
+                    <li><a href="#contact">Schedule a meeting</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © <span id="footer-year">2026</span> WaltersWorks • Strategic Leadership &amp; Technology Enablement
+        </div>
+    </div>
+</footer>
+`;
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Inject shared components, then render icons
+    injectComponent('ww-nav', NAV_HTML);
+    injectComponent('ww-footer', FOOTER_HTML);
 
     if (window.lucide) {
         lucide.createIcons();
@@ -19,7 +97,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         yearEl.textContent = new Date().getFullYear();
     }
 
-    // 3. Mobile menu toggle (delegated since nav is injected)
+    // 3. Mobile menu toggle
     document.addEventListener('click', (e) => {
         const toggle = e.target.closest('#mobile-menu-toggle');
         const menu = document.getElementById('mobile-menu');
@@ -65,26 +143,19 @@ function closeMobileMenu() {
 }
 
 /**
- * Loads an external HTML file into a placeholder element
+ * Injects component markup into a placeholder element and marks
+ * the nav link for the current page as active.
  */
-async function loadComponent(selector, path) {
+function injectComponent(selector, html) {
     const element = document.querySelector(selector);
     if (!element) return;
 
-    try {
-        const response = await fetch(path);
-        if (response.ok) {
-            element.innerHTML = await response.text();
+    element.innerHTML = html;
 
-            // Mark the active nav link for the current page
-            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-            element.querySelectorAll('a.nav-link').forEach(link => {
-                if (link.getAttribute('href') === currentPath) {
-                    link.classList.add('active');
-                }
-            });
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    element.querySelectorAll('a.nav-link').forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
         }
-    } catch (err) {
-        console.error(`Error loading component ${path}:`, err);
-    }
+    });
 }

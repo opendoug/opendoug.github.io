@@ -4,85 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataWorks | Strategic Data Engineering & Analytics</title>
+    <meta name="description" content="Modern data stacks and analytics engineering that turn raw information into strategic intelligence.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <ww-nav></ww-nav>
+    <header class="site-header">
+        <div class="container bar">
+            <a href="index.html" class="brand"><span class="bracket">$</span> waltersworks<span class="cursor">&nbsp;</span></a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="execworks.html">ExecWorks</a>
+                <a href="dataworks.html" aria-current="page">DataWorks</a>
+                <a href="webworks.html">WebWorks</a>
+            </nav>
+            <a href="index.html#contact" class="btn solid">Get Started</a>
+        </div>
+    </header>
 
     <main>
-        <section class="comic-hero" style="min-height: 80vh; display: flex; align-items: center; padding: var(--space-24) 0; background: var(--gradient-success);">
+        <section class="hero data">
             <div class="container">
-                <div class="grid md:grid-cols-12 gap-16 items-center">
-                    <div class="md:col-span-8 lg:col-span-7 md:text-left text-center">
-                        <div class="success-badge mb-8" style="font-size: 1rem; padding: 0.75rem 1.5rem;">★ Data Excellence</div>
-                        <h1 class="comic-headline" style="font-size: clamp(3.5rem, 8vw, 5.5rem); line-height: 1.0; margin-bottom: var(--space-8);">
-                            Actionable Insights, <br><span style="color: hsl(var(--highlight)); text-shadow: 4px 4px 0 hsl(var(--foreground));">No Fluff.</span>
-                        </h1>
-                        <p class="text-2xl mb-12" style="opacity: 0.95; line-height: 1.4; font-weight: 500;">
-                            Stop drowning in data and start driving growth. We build the pipelines that turn raw information into strategic intelligence.
-                        </p>
-                    </div>
-                    <div class="md:col-span-4 lg:col-span-5 hidden md:flex justify-center">
-                        <div class="comic-panel" style="width: 100%; height: 350px; transform: rotate(2deg); display: flex; align-items: center; justify-content: center; background: hsl(var(--highlight)/0.15); border-width: 4px;">
-                            <i data-lucide="database" style="width: 10rem; height: 10rem; color: hsl(var(--foreground)); opacity: 0.15;"></i>
-                        </div>
-                    </div>
-                </div>
+                <span class="eyebrow">Data Excellence</span>
+                <h1>Actionable Insights, <em>No Fluff.</em></h1>
+                <p class="lede">Stop drowning in data and start driving growth. We build the pipelines that turn raw information into strategic intelligence.</p>
             </div>
         </section>
 
-        <section class="py-24 halftone-bg">
+        <section class="grid-paper">
             <div class="container">
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="comic-panel">
-                        <div class="comic-icon mb-6"><i data-lucide="layers" class="text-primary"></i></div>
-                        <h3 class="font-bold text-2xl mb-3">Modern Data Stack</h3>
-                        <p class="text-sm text-muted">Fivetran, dbt, and Cloud Data Warehouses for robust, scalable infrastructure.</p>
+                <div class="cards cols-3">
+                    <div class="card data">
+                        <span class="num">&#9638;</span>
+                        <h3>Modern Data Stack</h3>
+                        <p>Fivetran, dbt, and Cloud Data Warehouses for robust, scalable infrastructure.</p>
                     </div>
-                    <div class="comic-panel">
-                        <div class="comic-icon mb-6"><i data-lucide="bar-chart-3" class="text-primary"></i></div>
-                        <h3 class="font-bold text-2xl mb-3">Analytics Engineering</h3>
-                        <p class="text-sm text-muted">Clean, modeled data that looks the same across every dashboard.</p>
+                    <div class="card data">
+                        <span class="num">&#9636;</span>
+                        <h3>Analytics Engineering</h3>
+                        <p>Clean, modeled data that looks the same across every dashboard.</p>
                     </div>
-                    <div class="comic-panel">
-                        <div class="comic-icon mb-6"><i data-lucide="target" class="text-primary"></i></div>
-                        <h3 class="font-bold text-2xl mb-3">Business Intelligence</h3>
-                        <p class="text-sm text-muted">Self-service reporting that actually answers business questions.</p>
+                    <div class="card data">
+                        <span class="num">&#9678;</span>
+                        <h3>Business Intelligence</h3>
+                        <p>Self-service reporting that actually answers business questions.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Triage CTA -->
-        <section class="py-24 bg-card border-t border-b border-foreground">
-            <div class="container text-center">
-                <div class="comic-panel mx-auto relative overflow-hidden" style="max-width: 900px;">
-                    <div style="position: absolute; top: 0; right: 0; opacity: 0.05; transform: translate(25%, -25%);">
-                        <i data-lucide="rocket" style="width: 20rem; height: 20rem;"></i>
-                    </div>
-                    <h2 class="comic-headline text-4xl mb-6">See it in <span class="text-secondary">Action</span></h2>
-                    <p class="text-lg mx-auto mb-8 max-w-prose">
-                        Our Triage app is a perfect example of how we combine data engineering with automation to solve real operational pain.
-                    </p>
-                    <a href="triage.html" class="comic-button bg-secondary">
-                        View Case Study <i data-lucide="arrow-right" class="ml-2"></i>
-                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <ww-footer></ww-footer>
-
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => lucide.createIcons(), 500);
-        });
-    </script>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="rule">------------------------------------------------------------</div>
+            <div>&copy; 2026 WaltersWorks &middot; Strategic Leadership &amp; Technology Enablement</div>
+            <div class="links">
+                <a href="mailto:doug@waltersworks.com">doug@waltersworks.com</a>
+                <a href="https://github.com/opendoug/opendoug.github.io" target="_blank" rel="noopener">view source</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

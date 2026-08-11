@@ -4,78 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExecWorks | Fractional C-Suite & Strategic Leadership</title>
+    <meta name="description" content="Fractional C-Suite leadership and strategic guidance to navigate your company's most complex challenges.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <ww-nav></ww-nav>
+    <header class="site-header">
+        <div class="container bar">
+            <a href="index.html" class="brand"><span class="bracket">$</span> waltersworks<span class="cursor">&nbsp;</span></a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="execworks.html" aria-current="page">ExecWorks</a>
+                <a href="dataworks.html">DataWorks</a>
+                <a href="webworks.html">WebWorks</a>
+            </nav>
+            <a href="index.html#contact" class="btn solid">Get Started</a>
+        </div>
+    </header>
 
     <main>
-        <section class="comic-hero" style="min-height: 80vh; display: flex; align-items: center; padding: var(--space-24) 0;">
+        <section class="hero exec">
             <div class="container">
-                <div class="grid md:grid-cols-12 gap-16 items-center">
-                    <div class="md:col-span-8 lg:col-span-7 md:text-left text-center">
-                        <div class="success-badge mb-8" style="font-size: 1rem; padding: 0.75rem 1.5rem;">★ Strategic Leadership</div>
-                        <h1 class="comic-headline" style="font-size: clamp(3.5rem, 8vw, 5.5rem); line-height: 1.0; margin-bottom: var(--space-8);">
-                            Fractional Leadership, <br><span style="color: hsl(var(--highlight)); text-shadow: 4px 4px 0 hsl(var(--foreground));">Full Impact.</span>
-                        </h1>
-                        <p class="text-2xl mb-12" style="opacity: 0.95; line-height: 1.4; font-weight: 500;">
-                            High-level strategic guidance without the full-time overhead. We provide the vision and experience to navigate your company's most complex challenges.
-                        </p>
-                    </div>
-                    <div class="md:col-span-4 lg:col-span-5 hidden md:flex justify-center">
-                        <div class="comic-panel" style="width: 100%; height: 350px; transform: rotate(-2deg); display: flex; align-items: center; justify-content: center; background: hsl(var(--highlight)/0.1); border-width: 4px;">
-                            <i data-lucide="briefcase" style="width: 10rem; height: 10rem; color: hsl(var(--foreground)); opacity: 0.15;"></i>
-                        </div>
-                    </div>
-                </div>
+                <span class="eyebrow">Strategic Leadership</span>
+                <h1>Fractional Leadership, <em>Full Impact.</em></h1>
+                <p class="lede">High-level strategic guidance without the full-time overhead. We provide the vision and experience to navigate your company's most complex challenges.</p>
             </div>
         </section>
 
-        <section class="py-24 halftone-bg">
-            <div class="container">
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div class="comic-panel">
-                        <h3 class="comic-headline text-3xl mb-6">The Case for <span class="text-primary">Fractional</span></h3>
-                        <p class="mb-4">Building a world-class leadership team is expensive and time-consuming. Fractional leadership gives you access to veteran executives who can:</p>
-                        <ul class="flex flex-col gap-4" style="list-style: none;">
-                            <li class="flex items-center gap-3">
-                                <div class="success-badge" style="padding: 0.25rem 0.5rem; border-width: 1px;"><i data-lucide="check" style="width: 1rem; height: 1rem;"></i></div>
-                                <span class="font-bold">Design scalable organizational structures</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="success-badge" style="padding: 0.25rem 0.5rem; border-width: 1px;"><i data-lucide="check" style="width: 1rem; height: 1rem;"></i></div>
-                                <span class="font-bold">Navigate complex digital transformations</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="success-badge" style="padding: 0.25rem 0.5rem; border-width: 1px;"><i data-lucide="check" style="width: 1rem; height: 1rem;"></i></div>
-                                <span class="font-bold">Mentor and grow your internal leadership team</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex items-center justify-center">
-                        <div class="comic-panel" style="transform: rotate(2.5deg); background: hsl(var(--highlight)/0.1);">
-                            <p class="text-xl font-bold italic" style="line-height: 1.4;">
-                                <i data-lucide="quote" class="mb-4 text-primary"></i><br>
-                                "Leadership isn't about having all the answers, but about asking the right questions and building the systems that find them."
-                            </p>
-                        </div>
-                    </div>
+        <section class="grid-paper">
+            <div class="container split">
+                <div class="case">
+                    <h3>The Case for Fractional</h3>
+                    <p>Building a world-class leadership team is expensive and time-consuming. Fractional leadership gives you access to veteran executives who can:</p>
+                    <ul class="check-list">
+                        <li>Design scalable organizational structures</li>
+                        <li>Navigate complex digital transformations</li>
+                        <li>Mentor and grow your internal leadership team</li>
+                    </ul>
+                </div>
+                <div class="quote">
+                    <p>&ldquo;Leadership isn't about having all the answers, but about asking the right questions and building the systems that find them.&rdquo;</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <ww-footer></ww-footer>
-
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => lucide.createIcons(), 500);
-        });
-    </script>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="rule">------------------------------------------------------------</div>
+            <div>&copy; 2026 WaltersWorks &middot; Strategic Leadership &amp; Technology Enablement</div>
+            <div class="links">
+                <a href="mailto:doug@waltersworks.com">doug@waltersworks.com</a>
+                <a href="https://github.com/opendoug/opendoug.github.io" target="_blank" rel="noopener">view source</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -3,116 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triage Showcase | WaltersWorks</title>
+    <title>Triage Case Study | WaltersWorks</title>
+    <meta name="description" content="How WebWorks turned a manual, high-stress triage process into an automated scheduling engine.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <ww-nav></ww-nav>
+    <header class="site-header">
+        <div class="container bar">
+            <a href="index.html" class="brand"><span class="bracket">$</span> waltersworks<span class="cursor">&nbsp;</span></a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="execworks.html">ExecWorks</a>
+                <a href="dataworks.html">DataWorks</a>
+                <a href="webworks.html">WebWorks</a>
+            </nav>
+            <a href="index.html#contact" class="btn solid">Get Started</a>
+        </div>
+    </header>
 
     <main>
-        <!-- Triage Hero -->
-        <section class="comic-hero" style="min-height: 80vh; display: flex; align-items: center; padding: var(--space-24) 0; background: var(--gradient-warm);">
+        <section class="hero">
             <div class="container">
-                <div class="grid md:grid-cols-12 gap-16 items-center">
-                    <div class="md:col-span-8 lg:col-span-7 md:text-left text-center">
-                        <div class="success-badge mb-8" style="font-size: 1rem; padding: 0.75rem 1.5rem;">★ 2024 Showcase</div>
-                        <h1 class="comic-headline" style="font-size: clamp(3.5rem, 8vw, 5.5rem); line-height: 1.0; margin-bottom: var(--space-8);">
-                            From <span style="color: hsl(var(--highlight)); text-shadow: 4px 4px 0 hsl(var(--foreground));">Chaos</span> <br>to Calendar.
-                        </h1>
-                        <p class="text-2xl mb-12" style="opacity: 0.95; line-height: 1.4; font-weight: 500;">
-                            We transformed a manual, high-stress triage process into an automated scheduling engine.
-                        </p>
-                    </div>
-                    <div class="md:col-span-4 lg:col-span-5 hidden md:flex justify-center">
-                        <div class="comic-panel" style="width: 100%; height: 350px; transform: rotate(4deg); display: flex; align-items: center; justify-content: center; background: hsl(var(--highlight)/0.15); border-width: 4px;">
-                            <i data-lucide="zap" style="width: 10rem; height: 10rem; color: hsl(var(--foreground)); opacity: 0.15;" class="animate-pulse"></i>
-                        </div>
-                    </div>
+                <a href="webworks.html" class="back">&larr; Back to WebWorks</a>
+                <span class="eyebrow">WebWorks Case Study</span>
+                <h1>From <em class="flag">Chaos</em> to Calendar.</h1>
+                <p class="lede">We transformed a manual, high-stress triage process into an automated scheduling engine.</p>
+            </div>
+        </section>
+
+        <section class="grid-paper">
+            <div class="container">
+                <div class="chaos">
+                    <h2>The Chaos Phase</h2>
+                    <ul>
+                        <li>
+                            <span class="num">!</span>
+                            <div>
+                                <h4>Information Overload</h4>
+                                <p>Hundreds of tasks trapped in unread emails and Slack pings.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">~</span>
+                            <div>
+                                <h4>Manual Friction</h4>
+                                <p>Hours spent every morning manually entering tasks into a calendar.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- The Chaos Phase -->
-        <section class="py-24 halftone-bg">
+        <section class="divider">
             <div class="container">
-                <div class="comic-panel grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="comic-headline text-4xl mb-6">The <span style="color: hsl(var(--destructive));">Chaos</span> Phase</h2>
-                        <ul class="flex flex-col gap-6" style="list-style: none;">
-                            <li class="flex gap-4">
-                                <div class="comic-icon" style="background: hsl(var(--destructive) / 0.1); border-color: hsl(var(--destructive));">
-                                    <i data-lucide="alert-circle" style="color: hsl(var(--destructive));"></i>
-                                </div>
-                                <div class="flex-1">
-                                    <h4 class="font-bold text-lg">Information Overload</h4>
-                                    <p class="text-muted">Hundreds of tasks trapped in unread emails and Slack pings.</p>
-                                </div>
-                            </li>
-                            <li class="flex gap-4">
-                                <div class="comic-icon" style="background: hsl(var(--destructive) / 0.1); border-color: hsl(var(--destructive));">
-                                    <i data-lucide="clock" style="color: hsl(var(--destructive));"></i>
-                                </div>
-                                <div class="flex-1">
-                                    <h4 class="font-bold text-lg">Manual Friction</h4>
-                                    <p class="text-muted">Hours spent every morning manually entering tasks into a calendar.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="hidden md:block">
-                        <div class="comic-panel" style="background: hsl(var(--muted)/0.5); transform: rotate(-2deg); display: flex; align-items: center; justify-content: center; min-height: 200px;">
-                            <i data-lucide="layers" style="width: 4rem; height: 4rem; opacity: 0.2;"></i>
-                        </div>
-                    </div>
+                <div class="section-head">
+                    <h2>The Automation Pipeline</h2>
+                    <p>A four-phase journey from voice to flow</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- The Pipeline -->
-        <section class="py-24 bg-card">
-            <div class="container">
-                <div class="text-center mb-16">
-                    <h2 class="comic-headline text-4xl mb-4">The <span class="text-primary">Automation</span> Pipeline</h2>
-                    <p class="text-lg text-muted">A four-phase journey from voice to flow</p>
-                </div>
-                
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="comic-panel text-center">
-                        <div class="comic-icon mx-auto mb-6"><i data-lucide="mic" class="text-primary"></i></div>
-                        <h3 class="font-bold text-xl mb-3">Capture</h3>
-                        <p class="text-sm text-muted">Voice memos and emails processed by AI.</p>
+                <div class="cards cols-4">
+                    <div class="card centered">
+                        <span class="num">01</span>
+                        <h3>Capture</h3>
+                        <p>Voice memos and emails processed by AI.</p>
                     </div>
-                    <div class="comic-panel text-center">
-                        <div class="comic-icon mx-auto mb-6"><i data-lucide="brain" class="text-primary"></i></div>
-                        <h3 class="font-bold text-xl mb-3">Refine</h3>
-                        <p class="text-sm text-muted">AI categorizes and prioritizes every task.</p>
+                    <div class="card centered">
+                        <span class="num">02</span>
+                        <h3>Refine</h3>
+                        <p>AI categorizes and prioritizes every task.</p>
                     </div>
-                    <div class="comic-panel text-center">
-                        <div class="comic-icon mx-auto mb-6"><i data-lucide="calendar" class="text-primary"></i></div>
-                        <h3 class="font-bold text-xl mb-3">Schedule</h3>
-                        <p class="text-sm text-muted">Optimized slots found automatically.</p>
+                    <div class="card centered">
+                        <span class="num">03</span>
+                        <h3>Schedule</h3>
+                        <p>Optimized slots found automatically.</p>
                     </div>
-                    <div class="comic-panel text-center">
-                        <div class="comic-icon mx-auto mb-6"><i data-lucide="check-circle" class="text-primary"></i></div>
-                        <h3 class="font-bold text-xl mb-3">Flow</h3>
-                        <p class="text-sm text-muted">The user wakes up to a perfect day.</p>
+                    <div class="card centered">
+                        <span class="num">04</span>
+                        <h3>Flow</h3>
+                        <p>The user wakes up to a perfect day.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <ww-footer></ww-footer>
-
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => lucide.createIcons(), 500);
-        });
-    </script>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="rule">------------------------------------------------------------</div>
+            <div>&copy; 2026 WaltersWorks &middot; Strategic Leadership &amp; Technology Enablement</div>
+            <div class="links">
+                <a href="mailto:doug@waltersworks.com">doug@waltersworks.com</a>
+                <a href="https://github.com/opendoug/opendoug.github.io" target="_blank" rel="noopener">view source</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

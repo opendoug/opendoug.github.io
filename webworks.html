@@ -3,63 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebWorks | High-Performance Web Applications</title>
+    <title>WebWorks | Web Design, Applications & Digital Marketing</title>
+    <meta name="description" content="Web design, web applications, and digital marketing enablement -- Google Analytics, Google Ads, Google Business Profile, and managed WordPress hosting through Flywheel.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <ww-nav></ww-nav>
+    <header class="site-header">
+        <div class="container bar">
+            <a href="index.html" class="brand"><span class="bracket">$</span> waltersworks<span class="cursor">&nbsp;</span></a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="execworks.html">ExecWorks</a>
+                <a href="dataworks.html">DataWorks</a>
+                <a href="webworks.html" aria-current="page">WebWorks</a>
+            </nav>
+            <a href="index.html#contact" class="btn solid">Get Started</a>
+        </div>
+    </header>
 
     <main>
-        <section class="comic-hero" style="min-height: 80vh; display: flex; align-items: center; padding: var(--space-24) 0; background: var(--gradient-warm);">
+        <section class="hero">
             <div class="container">
-                <div class="grid md:grid-cols-12 gap-16 items-center">
-                    <div class="md:col-span-8 lg:col-span-7 md:text-left text-center">
-                        <div class="success-badge mb-8" style="font-size: 1rem; padding: 0.75rem 1.5rem;">★ Web Engineering</div>
-                        <h1 class="comic-headline" style="font-size: clamp(3.5rem, 8vw, 5.5rem); line-height: 1.0; margin-bottom: var(--space-8);">
-                            Web Apps that <br><span style="color: hsl(var(--highlight)); text-shadow: 4px 4px 0 hsl(var(--foreground));">Actually Work.</span>
-                        </h1>
-                        <p class="text-2xl mb-12" style="opacity: 0.95; line-height: 1.4; font-weight: 500;">
-                            Fast, secure, and built for scale. We design web experiences that aren't just pretty—they're functional powerhouses for your business.
-                        </p>
+                <span class="eyebrow">Web &amp; Digital Marketing</span>
+                <h1>Web Apps that <em>Actually Work.</em></h1>
+                <p class="lede">Fast, secure, and built for scale. From custom web design to full applications to the marketing plumbing that makes a site worth visiting, we design web experiences that aren't just pretty&mdash;they're functional powerhouses for your business.</p>
+            </div>
+        </section>
+
+        <section class="grid-paper">
+            <div class="container">
+                <div class="section-head">
+                    <h2>What We Do</h2>
+                    <p>Everything it takes to get a business online and found</p>
+                </div>
+                <div class="cards cols-4">
+                    <div class="card">
+                        <span class="num">01</span>
+                        <h3>Web Design</h3>
+                        <p>Clean, professional sites for local businesses, nonprofits, and municipalities -- built to represent you well and convert visitors into customers.</p>
                     </div>
-                    <div class="md:col-span-4 lg:col-span-5 hidden md:flex justify-center">
-                        <div class="comic-panel" style="width: 100%; height: 350px; transform: rotate(-3deg); display: flex; align-items: center; justify-content: center; background: hsl(var(--highlight)/0.15); border-width: 4px;">
-                            <i data-lucide="layout" style="width: 10rem; height: 10rem; color: hsl(var(--foreground)); opacity: 0.15;"></i>
-                        </div>
+                    <div class="card">
+                        <span class="num">02</span>
+                        <h3>Web Applications</h3>
+                        <p>Fast, secure, and built for scale. Custom software when an off-the-shelf site isn't enough.</p>
+                    </div>
+                    <div class="card">
+                        <span class="num">03</span>
+                        <h3>Digital Marketing</h3>
+                        <p>Google Analytics, Google Ads, and Google Business Profile -- set up correctly from day one so you can measure what's actually working.</p>
+                    </div>
+                    <div class="card">
+                        <span class="num">04</span>
+                        <h3>Managed WordPress Hosting</h3>
+                        <p>We're a Flywheel hosting partner, so every WordPress site we build comes with premium managed hosting, security, and support included.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 halftone-bg">
+        <section class="divider">
             <div class="container">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="comic-panel">
-                        <div class="comic-icon mb-6"><i data-lucide="zap" class="text-primary"></i></div>
-                        <h3 class="font-bold text-2xl mb-4">Speed is a Feature</h3>
-                        <p class="text-muted">We optimize every line of code to ensure your web presence is lighting fast, whether on a desktop in New York or a phone in rural Pennsylvania.</p>
-                    </div>
-                    <div class="comic-panel">
-                        <div class="comic-icon mb-6"><i data-lucide="shield-check" class="text-primary"></i></div>
-                        <h3 class="font-bold text-2xl mb-4">Security First</h3>
-                        <p class="text-muted">Your data and your customers' trust are non-negotiable. We follow modern security best practices in every deployment.</p>
-                    </div>
+                <div class="section-head">
+                    <h2>Sites We've Built</h2>
+                    <p>A few of the businesses and organizations we've launched, redesigned, or host</p>
+                </div>
+                <div class="terminal clients">
+                    <div class="prompt">$ ls clients/</div>
+                    <div class="out"><a href="https://amishcoops.com" target="_blank" rel="noopener">amishcoops.com</a></div>
+                    <div class="out"><a href="https://halfpintcreamery.com" target="_blank" rel="noopener">halfpintcreamery.com</a></div>
+                    <div class="out"><a href="https://patsainc.org" target="_blank" rel="noopener">patsainc.org</a></div>
+                    <div class="out"><a href="https://elite.team" target="_blank" rel="noopener">elite.team</a></div>
+                    <div class="out"><a href="https://cardinal.ca" target="_blank" rel="noopener">cardinal.ca</a></div>
+                    <div class="out"><a href="https://welovebeautifulsmiles.com" target="_blank" rel="noopener">welovebeautifulsmiles.com</a></div>
+                    <div class="out"><a href="https://shrewsburyborough.org" target="_blank" rel="noopener">shrewsburyborough.org</a></div>
+                    <div class="out"><a href="https://districtcourt19304.com" target="_blank" rel="noopener">districtcourt19304.com</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="callout wide">
+                    <span class="eyebrow">Case Study</span>
+                    <h2>See it in Action</h2>
+                    <p>Triage is a perfect example of what WebWorks builds: a real web app that turned a manual, high-stress task-triage process into an automated scheduling engine.</p>
+                    <a href="triage.html" class="btn solid">View Case Study</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <ww-footer></ww-footer>
-
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => lucide.createIcons(), 500);
-        });
-    </script>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="rule">------------------------------------------------------------</div>
+            <div>&copy; 2026 WaltersWorks &middot; Strategic Leadership &amp; Technology Enablement</div>
+            <div class="links">
+                <a href="mailto:doug@waltersworks.com">doug@waltersworks.com</a>
+                <a href="https://github.com/opendoug/opendoug.github.io" target="_blank" rel="noopener">view source</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

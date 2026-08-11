@@ -3,28 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Task Lost | WaltersWorks</title>
+    <title>404 - Not Found | WaltersWorks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Muli:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <ww-nav></ww-nav>
+    <header class="site-header">
+        <div class="container bar">
+            <a href="index.html" class="brand"><span class="bracket">$</span> waltersworks<span class="cursor">&nbsp;</span></a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="execworks.html">ExecWorks</a>
+                <a href="dataworks.html">DataWorks</a>
+                <a href="webworks.html">WebWorks</a>
+            </nav>
+            <a href="index.html#contact" class="btn solid">Get Started</a>
+        </div>
+    </header>
 
-    <main class="py-24 halftone-bg" style="min-height: 80vh; display: flex; align-items: center; justify-content: center;">
-        <div class="container text-center">
-            <div class="comic-panel p-12" style="max-width: 600px; margin: 0 auto;">
-                <h1 class="comic-headline" style="font-size: 5rem; color: hsl(var(--destructive));">404</h1>
-                <h2 class="comic-headline" style="font-size: 2rem; margin-bottom: 1.5rem;">Task <span style="text-decoration: line-through;">Not Found</span> Lost.</h2>
-                <p style="margin-bottom: 2rem;">It looks like this panel was cut from the final edit. Let's get you back to the main story.</p>
-                <a href="index.html" class="comic-button bg-primary">Back to Home</a>
+    <main class="grid-paper" style="min-height: 60vh; display: flex; align-items: center;">
+        <div class="container">
+            <div class="callout error">
+                <p class="error-line">bash: this-page: No such file or directory</p>
+                <h1><s>Task Not Found</s> Lost.</h1>
+                <p>This route doesn't exist. Let's get you back to <code>/</code>.</p>
+                <a href="index.html" class="btn solid">Back to Home</a>
             </div>
         </div>
     </main>
 
-    <ww-footer></ww-footer>
-
-    <script src="js/main.js"></script>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="rule">------------------------------------------------------------</div>
+            <div>&copy; 2026 WaltersWorks &middot; Strategic Leadership &amp; Technology Enablement</div>
+            <div class="links">
+                <a href="mailto:doug@waltersworks.com">doug@waltersworks.com</a>
+                <a href="https://github.com/opendoug/opendoug.github.io" target="_blank" rel="noopener">view source</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

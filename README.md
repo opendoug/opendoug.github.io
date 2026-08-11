@@ -1,73 +1,24 @@
-# Welcome to your Lovable project
+# waltersworks.com
 
-## Project info
+Source for the WaltersWorks marketing site, published via GitHub Pages.
 
-**URL**: https://lovable.dev/projects/73b6bf3b-a106-4bdc-a020-777bd26ed6ac
+## Stack
 
-## How can I edit this code?
+Plain HTML and CSS. No JavaScript, no framework, no build step, no npm install.
 
-There are several ways of editing your application.
+- `index.html`, `execworks.html`, `dataworks.html`, `webworks.html`, `triage.html`, `404.html` — each is a complete, self-contained page. Header and footer are duplicated into every file on purpose, not templated.
+- `css/style.css` — the whole design system, one stylesheet, styled by semantic class per component (`.hero`, `.card`, `.callout`, ...) rather than utility classes.
 
-**Use Lovable**
+## Local preview
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/73b6bf3b-a106-4bdc-a020-777bd26ed6ac) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Any static file server works, e.g.:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+python -m http.server 4173
 ```
 
-**Edit a file directly in GitHub**
+No JavaScript means the pages also work fine opened directly via `file://`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deploy
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/73b6bf3b-a106-4bdc-a020-777bd26ed6ac) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Pushing to `master` triggers `.github/workflows/workflow.yaml`, which publishes the repo root straight to GitHub Pages. No build artifacts to worry about.

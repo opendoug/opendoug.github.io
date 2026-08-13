@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Not Found | WaltersWorks</title>
+    <title>Blog | WaltersWorks</title>
+    <meta name="description" content="Long-form notes on APIs, integrations, and technology, written from actual client work.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -20,21 +21,32 @@
                 <a href="dataworks.html">DataWorks</a>
                 <a href="webworks.html">WebWorks</a>
                 <a href="about.html">About</a>
-                <a href="blog.html">Blog</a>
+                <a href="blog.html" aria-current="page">Blog</a>
             </nav>
             <a href="index.html#contact" class="btn solid">Get Started</a>
         </div>
     </header>
 
-    <main class="grid-paper" style="min-height: 60vh; display: flex; align-items: center;">
-        <div class="container">
-            <div class="callout error">
-                <p class="error-line">bash: this-page: No such file or directory</p>
-                <h1><s>Task Not Found</s> Lost.</h1>
-                <p>This route doesn't exist. Let's get you back to <code>/</code>.</p>
-                <a href="index.html" class="btn solid">Back to Home</a>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <span class="eyebrow">Blog</span>
+                <h1>Field <em>Notes.</em></h1>
+                <p class="lede">Long-form notes on APIs, integrations, and the occasional walled garden -- written from inside actual client work, not marketing copy.</p>
             </div>
-        </div>
+        </section>
+
+        <section class="grid-paper">
+            <div class="container">
+                <div class="post-list">
+                    <article class="post-entry">
+                        <time datetime="2026-08-11">2026-08-11</time>
+                        <h3><a href="posts/life-inside-the-walled-garden-appfolio-apis.html">Life Inside the Walled Garden: My Experience With the AppFolio APIs</a></h3>
+                        <p>AppFolio's APIs have come a long way, but building against them still means navigating a separate developer portal, gated permissions, and webhooks with some real sharp edges. Notes from actually doing it.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">

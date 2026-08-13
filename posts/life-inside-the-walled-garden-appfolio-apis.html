@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Inside the Walled Garden: My Experience With the AppFolio APIs | WaltersWorks</title>
+    <meta name="description" content="AppFolio's APIs have come a long way, but building against them still means navigating a separate developer portal, gated permissions, and webhooks with some real sharp edges. Notes from actually doing it.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container bar">
+            <a href="../index.html" class="brand"><span class="bracket">$</span> waltersworks<span class="cursor">&nbsp;</span></a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="../index.html">Home</a>
+                <a href="../execworks.html">ExecWorks</a>
+                <a href="../dataworks.html">DataWorks</a>
+                <a href="../webworks.html">WebWorks</a>
+                <a href="../about.html">About</a>
+                <a href="../blog.html" aria-current="page">Blog</a>
+            </nav>
+            <a href="../index.html#contact" class="btn solid">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <a href="../blog.html" class="back">&larr; Back to Blog</a>
+                <span class="eyebrow">Blog</span>
+                <h1>Life Inside the Walled Garden: My Experience With the AppFolio&nbsp;APIs</h1>
+                <p class="lede">Published August 11, 2026 by Doug Walters</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="prose">
+                    <p>There aren't many people out there building against the AppFolio APIs, which is part of why I wanted to write this up. AppFolio has made real progress in recent years, but it still feels like a &ldquo;walled garden&rdquo; in software terms &mdash; a lot of the functionality that lives in the AppFolio UI stays locked inside it. The Reports APIs (v1 and v2) have always been read-only, so at best they're useful for analytics and BI, but they were never going to power a real integration. The read/write Database API was originally gated behind the Max tier, which came at a significantly higher price point, so making the leap was expensive. Now that the Database API is available &agrave; la carte, the barriers to entry are finally coming down.</p>
+
+                    <h2>Start with the problem, not the API</h2>
+                    <p>Defining the problem you're trying to solve is still the critical first step in deciding which API to reach for.</p>
+                    <p>The v1 Reports API has by far the fewest endpoints and filtering parameters, and it works over simple GET requests. It's fine for testing and prototyping, but unless you're maintaining a legacy analytics pipeline or automation that already depends on it, I'd skip it and go straight to v2.</p>
+                    <p>The v2 Reports API expands the list of available endpoints and adds richer filtering through POST requests with JSON payloads. You still authenticate with a client ID and secret tied to a specific user, which makes credential rotation a little awkward &mdash; and can create real business continuity problems if an employee leaves and production credentials happen to be tied to their account. The nicer feature in v2 is the ability to retrieve saved reports by UUID. That means an end user can build a report in the AppFolio UI, hand the UUID to a developer, and the developer just calls that report rather than reconstructing the entire request from scratch.</p>
+
+                    <h2>The Database API: powerful, but hit-or-miss</h2>
+                    <p>My experience with the Database API has been a mixed bag, even after spending real time in the documentation.</p>
+                    <p>A few things stood out:</p>
+                    <ul>
+                        <li>Credentials and docs live in a separate developer portal, not in the AppFolio web app itself, and access to that portal isn't automatically provisioned. Like a lot of things with this API, you have to formally request it.</li>
+                        <li>Developer roles and permissions can be managed by a developer admin, but permission to specific endpoints and custom fields doesn't work the same way &mdash; there's no self-service management for those. You have to request them from AppFolio every time you want to grant someone access to an endpoint or a custom field.</li>
+                        <li>The sandbox database isn't available by default either. You have to ask for it before you can use it for development. It almost feels like AppFolio is nudging people toward developing in production, which is definitely not a best practice.</li>
+                        <li>The documentation's naming doesn't always map to what the endpoint actually does. For example, it isn't obvious from the docs that &ldquo;List All Bills&rdquo; also covers &ldquo;List One Bill (by Id)&rdquo; &mdash; you just have to know to look there.</li>
+                        <li>Foreign keys for joins have been inconsistent. Some endpoints were missing them entirely until recently. They're starting to show up, but coverage is still spotty, and I've found cases where I needed both the Database API and the v2 Reports API together to make an application work end to end.</li>
+                    </ul>
+
+                    <h2>Then there's webhooks</h2>
+                    <p>Webhooks come bundled with the Database API and are configured in the developer portal. You subscribe to a &ldquo;topic&rdquo; &mdash; General Ledger Details, for example &mdash; and every matching transaction gets pushed to your listener URL. There's a proper verification process, and AppFolio gives good guidance on guarding against duplicate deliveries.</p>
+                    <p>Where it gets complicated: both your sandbox and production databases fire webhooks at the same listener URL, and there's no way to scope webhooks to sandbox only. Once they're on, they're on for both. That means your listener has to figure out which database the webhook came from &mdash; and the <code>database_id</code> isn't something you can retrieve through the API at all. You have to go pull it from the URL of your AppFolio web app login page.</p>
+
+                    <h2>Where this leaves things</h2>
+                    <p>AppFolio has come a long way &mdash; from no API at all, to a read-only Reports API, to a genuine read/write Database API with a reasonable set of webhook topics for automation and integration work. Their growing Stack Marketplace suggests they're going to keep opening up database access to customers and partners. As the API offerings continue to mature, I expect we'll see a growing community of AppFolio developers building out a real ecosystem of prebuilt apps and custom tools that make the platform genuinely more useful to work with.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="divider">
+            <div class="container">
+                <a href="../blog.html" class="back">&larr; Back to Blog</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="rule">------------------------------------------------------------</div>
+            <div>&copy; 2026 WaltersWorks &middot; Strategic Leadership &amp; Technology Enablement</div>
+            <div class="links">
+                <a href="mailto:doug@waltersworks.com">doug@waltersworks.com</a>
+                <a href="https://github.com/opendoug/opendoug.github.io" target="_blank" rel="noopener">view source</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

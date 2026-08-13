@@ -1,0 +1,19 @@
+# WaltersWorks
+
+> Fractional C-suite leadership, data engineering, and web design/development/marketing services for growing businesses, run by Doug Walters.
+
+WaltersWorks has three service lines: ExecWorks (executive leadership), DataWorks (data engineering and analytics), and WebWorks (web design, applications, and digital marketing). The site is a small set of static marketing pages -- there is no application, login, or blog to crawl.
+
+## Services
+
+- [ExecWorks](https://waltersworks.com/execworks.html): Fractional C-Suite leadership -- organizational design, digital transformation guidance, and mentoring for internal leadership teams.
+- [DataWorks](https://waltersworks.com/dataworks.html): Modern data stack, analytics engineering, and business intelligence work using tools like Fivetran, dbt, and cloud data warehouses.
+- [WebWorks](https://waltersworks.com/webworks.html): Web design, custom web applications, and digital marketing setup (Google Analytics, Google Ads, Google Business Profile), plus managed WordPress hosting through a Flywheel partnership.
+
+## Case Studies
+
+- [Triage](https://waltersworks.com/triage.html): A WebWorks case study describing an AI-assisted pipeline that turns voice memos and email into an automated calendar-scheduling system.
+
+## Contact
+
+- Email: doug@waltersworks.com
